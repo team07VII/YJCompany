@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 配置注解模型 -->
+    <mvc:annotation-driven>
+        <!-- 消息转换器,解决responseBody返回中外乱码问题 -->
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <context:component-scan base-package="com.yanjiang"/>
+
+    <!-- springmvc第一条: 将静态页面的处理交由web服务器自己处理, springmvc不处理 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 配置静态页面不扫描 -->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <!--<mvc:resources mapping="images/**" location="/resources/"/>-->
+    <!--<mvc:resources mapping="css/**" location="/resources/"/>-->
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置视图解析的前缀 -->
+        <property name="prefix" value="/WEB-INF/pages/"/>
+
+        <!-- 配置视图解析的后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 文件上传 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置文件上传的大小 -->
+        <property name="maxUploadSize" value="5242880"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="uploadTempDir" value="/WEB-INF/files"/>
+    </bean>
+
+</beans>

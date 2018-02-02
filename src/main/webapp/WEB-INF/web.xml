@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <!-- 这种写法 -->
+    <param-value>classpath*:spring-*.xml</param-value>
+  </context-param>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+    <!-- 定义spring配置路径 -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-config.xml</param-value>
+    </init-param>
+
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <!-- 跳转到错误页面, 开发过程中可以先注销 (不然不好看到报错信息) -->
+  <!--<error-page>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/error</location>-->
+  <!--</error-page>-->
+
+  <!--<error-page>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/error</location>-->
+  <!--</error-page>-->
+
+</web-app>
