@@ -1,4 +1,4 @@
-package com.yanjiang.basis.utils.mail;
+package com.yanjiang.basis.utils.impl.mail;
 
 /**
  * Created by dllo on 17/11/18.

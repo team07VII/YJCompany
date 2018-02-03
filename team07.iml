@@ -22,7 +22,7 @@
         </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/SSM-mybatis.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-mybatis.xml</file>
         </fileset>
       </configuration>
     </facet>
