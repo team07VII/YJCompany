@@ -14,10 +14,19 @@ public class BasisController {
         return "index";
     }
 
+    @RequestMapping("/home")
+    public String main(){
+        return "main";
+    }
+
     @RequestMapping("/error")
     public String error(){
         return "error";
     }
 
+    @RequestMapping("RightBody_Welcome")
+    public String welcome(){
+        return "RightBody_Welcome";
+    }
 
 }

@@ -1,0 +1,14 @@
+[
+    { id: "front", text: "首页",},
+	{ id: "frontPage", pid: "front", text: "公司简介", url: "RightBody_Welcome" },
+
+
+	{ id: "user", text: "个人中心",},
+	{ id: "addUser", pid: "user", text: "个人工作平台", url: "RightBody_Personal" },
+
+	{ id: "right", text: "综合管理",},
+    { id: "management", pid: "right", text: "管理", url: "RightBody_Manage" },
+
+	{ id: "science", text: "科研项目管理"},
+    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "RightBody_Science" }
+]
