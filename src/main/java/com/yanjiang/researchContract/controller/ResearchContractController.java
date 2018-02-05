@@ -1,14 +1,18 @@
-package com.yanjiang.basis.controller;
+package com.yanjiang.researchContract.controller;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by simone on 2018/2/5.
+ * Created by dllo on 18/2/5.
  */
 @Controller
-public class TechonologyContractApplyController {
+@RequestMapping("researchContract/")
+public class ResearchContractController {
+
     @RequestMapping("techonologyContractApply")
     public String techonologyContractApply(){
-        return "techonologyContractApply";
+        return "researchContract/techonologyContractApply";
     }
+
 }

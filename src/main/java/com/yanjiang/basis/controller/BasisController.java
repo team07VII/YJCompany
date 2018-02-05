@@ -60,7 +60,7 @@ public class BasisController {
     }
 
 //    个人页面首页的右侧部门
-    @RequestMapping("RightBody_Welcome")
+    @RequestMapping("page/RightBody_Welcome")
     public String welcome(){
         return "page/RightBody_Welcome";
     }

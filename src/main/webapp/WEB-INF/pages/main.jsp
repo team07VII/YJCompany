@@ -56,7 +56,7 @@
 
     mini.parse();
     var iframe = document.getElementById("mainframe");
-    iframe.src = "RightBody_Welcome";
+    iframe.src = "page/RightBody_Welcome";
 
     function onItemSelect(e) {
         var item = e.item;
