@@ -10,5 +10,5 @@
     { id: "management", pid: "right", text: "管理", url: "RightBody_Manage" },
 
 	{ id: "science", text: "科研项目管理"},
-    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "RightBody_Science" }
+    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "researchRA/projectApplyBasic" }
 ]
