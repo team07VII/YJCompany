@@ -10,7 +10,6 @@
     { id: "management", pid: "right", text: "管理", url: "RightBody_Manage" },
 
 	{ id: "science", text: "科研项目管理"},
-    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "RightBody_Science" },
-    { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报", url: "techonologyContractApply"}
-
+    { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报", url: "techonologyContractApply"},
+    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "researchRA/projectApplyBasic" }
 ]
