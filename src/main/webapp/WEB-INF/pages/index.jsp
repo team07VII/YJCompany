@@ -132,7 +132,7 @@
             </g>
         </g>
     </svg>
-    <a href="/home">阳江有限技术公司</a>
+    <a href="/login">阳江有限技术公司</a>
 </section>
 <script src='<c:url value="/resources/js/4032af61ca0478304ab7b31b7.js"/>'></script>
 
