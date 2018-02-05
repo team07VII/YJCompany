@@ -1,6 +1,6 @@
 [
     { id: "front", text: "首页",},
-	{ id: "frontPage", pid: "front", text: "公司简介", url: "RightBody_Welcome" },
+	{ id: "frontPage", pid: "front", text: "公司简介", url: "/page/RightBody_Welcome" },
 
 
 	{ id: "user", text: "个人中心",},

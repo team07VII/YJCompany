@@ -29,7 +29,7 @@
     <!-- 6. 配置 mybatis 中的 mapper 接口自动扫描 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- mapper 接口代理对象所在的包 -->
-        <property name="basePackage" value="com.yanjiang.mapper"/>
+        <property name="basePackage" value="com.yanjiang.*.mapper"/>
         <!-- 定义 sessionFactory, 引用上面配置的工厂对象 -->
         <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
     </bean>
@@ -49,7 +49,7 @@
 
     <!-- 配置aop -->
     <aop:config>
-        <aop:pointcut id="pointCut" expression="execution(* com.yanjiang.*.service.*.*(..))"/>
+        <aop:pointcut id="pointCut" expression="execution(* com.yanjiang.*.service..*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointCut"/>
     </aop:config>
 

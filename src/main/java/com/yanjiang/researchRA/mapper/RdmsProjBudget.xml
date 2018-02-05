@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanjiang.researchRA.mapper.RdmsProjBudgetMapper">
+
+    <resultMap id="BaseResultMap" type="com.yanjiang.researchRA.domain.RdmsProjBudget">
+        <id property="budDetailId" column="BUD_DETAIL_ID" />
+        <result property="busiTable" column="BUSI_TABLE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="busiId" column="BUSI_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="budgetType" column="BUDGET_TYPE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="budgetFee" column="BUDGET_FEE" jdbcType="DECIMAL" javaType="java.lang.Double" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List" >
+        BUD_DETAIL_ID, BUSI_TABLE, BUSI_ID, BUDGET_TYPE, BUDGET_FEE
+    </sql>
+
+    <insert id="insert" parameterType="com.yanjiang.researchRA.domain.RdmsProjBudget">
+        INSERT INTO `pms.rdms_proj_budget`
+        (<include refid="Base_Column_List"/> )
+        VALUES (#{budDetailId,jdbcType=VARCHAR}, #{busiTable,jdbcType=VARCHAR}, #{busiId,jdbcType=VARCHAR},
+        #{budgetType,jdbcType=VARCHAR}, #{budgetFee,jdbcType=DECIMAL})
+    </insert>
+</mapper>
