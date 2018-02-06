@@ -53,4 +53,9 @@ public class ResearchRAController {
         return "";
     }
 
+    @RequestMapping("departmentManagerApproval")
+    public String departmentManagerApproval(){
+        return "researchRA/departmentManagerApproval";
+    }
+
 }
