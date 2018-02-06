@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanjiang.researchRA.mapper.RdmsProjBaseMapper">
+
+    <resultMap id="BaseResultMap" type="com.yanjiang.researchRA.domain.RdmsProjBase">
+        <id property="projId" column="PROJ_ID" />
+        <result property="projName" column="PROJ_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="projType" column="PROJ_TYPE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="appOrgNo" column="APP_ORG_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="appOrgOame" column="APP_ORG_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="uniteAppOrgNo" column="UNITE_APP_ORG_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="uniteAppOrgName" column="UNITE_APP_ORG_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="cycle" column="CYCLE" jdbcType="NUMERIC" javaType="java.lang.Integer" />
+        <result property="totalBudget" column="TOTAL_BUDGET" jdbcType="NUMERIC" javaType="java.lang.Double" />
+        <result property="purpose" column="PURPOSE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="safeDesc" column="SAFE_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="reliableDesc" column="RELIABLE_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="econDesc" column="ECON_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="otherDesc" column="OTHER_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="achievementDesc" column="ACHIEVEMENT_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="realUser" column="REAL_USER" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="potentialUser" column="POTENTIAL_USER" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="content" column="CONTENT" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="primeStaffNo" column="PRIME_STAFF_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="primeUserDesc" column="PRIME_USER_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="rightDesc" column="RIGHT_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="benefitsDesc" column="BENEFITS_DESC" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="fixedAssets" column="FIXED_ASSETS" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="acceptStand" column="ACCEPT_STAND" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="engineerEvaluate" column="ENGINEER_EVALUATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="accordEvaluate" column="ACCORD_EVALUATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="applicationEvaluate" column="APPLICATION_EVALUATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="totalEvaluate" column="TOTAL_EVALUATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="pmsRequire" column="PMS_REQUIRE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="advice" column="ADVICE" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="effectFlag" column="EFFECT_FLAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="createStaffNo" column="CREATE_STAFF_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="createStaffName" column="CREATE_STAFF_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="createDate" column="CREATE_DATE" jdbcType="DATE" javaType="java.util.Date" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        PROJ_ID,
+        PROJ_NAME,
+        PROJ_TYPE,
+        APP_ORG_NO,
+        APP_ORG_NAME,
+        UNITE_APP_ORG_NO,
+        UNITE_APP_ORG_NAME,
+        CYCLE,
+        TOTAL_BUDGET,
+        PURPOSE,
+        SAFE_DESC,
+        RELIABLE_DESC,
+        ECON_DESC,
+        OTHER_DESC,
+        ACHIEVEMENT_DESC,
+        REAL_USER,
+        POTENTIAL_USER,
+        CONTENT,
+        PRIME_STAFF_NO,
+        PRIME_USER_DESC,
+        RIGHT_DESC,
+        BENEFITS_DESC,
+        FIXED_ASSETS,
+        ACCEPT_STAND,
+        ENGINEER_EVALUATE,
+        ACCORD_EVALUATE,
+        APPLICATION_EVALUATE,
+        TOTAL_EVALUATE,
+        PMS_REQUIRE,
+        ADVICE,
+        EFFECT_FLAG,
+        CREATE_STAFF_NO,
+        CREATE_STAFF_NAME,
+        CREATE_DATE
+    </sql>
+
+
+    <insert id="insert">
+        INSERT INTO `PMS.RDMS_PROJ_BASE`
+        (<include refid="Base_Column_List"/> )
+        VALUES
+        (#{PROJ_ID},
+        #{PROJ_NAME},
+        #{PROJ_TYPE},
+        #{APP_ORG_NO},
+        #{APP_ORG_NAME},
+        #{UNITE_APP_ORG_NO},
+        #{UNITE_APP_ORG_NAME},
+        #{CYCLE},
+        #{TOTAL_BUDGET},
+        #{PURPOSE},
+        #{SAFE_DESC},
+        #{RELIABLE_DESC},
+        #{ECON_DESC},
+        #{OTHER_DESC},
+        #{ACHIEVEMENT_DESC},
+        #{REAL_USER},
+        #{POTENTIAL_USER},
+        #{CONTENT},
+        #{PRIME_STAFF_NO},
+        #{PRIME_USER_DESC},
+        #{RIGHT_DESC},
+        #{BENEFITS_DESC},
+        #{FIXED_ASSETS},
+        #{ACCEPT_STAND},
+        #{ENGINEER_EVALUATE},
+        #{ACCORD_EVALUATE},
+        #{APPLICATION_EVALUATE},
+        #{TOTAL_EVALUATE},
+        #{PMS_REQUIRE},
+        #{ADVICE},
+        #{EFFECT_FLAG},
+        #{CREATE_STAFF_NO},
+        #{CREATE_STAFF_NAME},
+        #{CREATE_DATE})
+    </insert>
+
+</mapper>

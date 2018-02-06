@@ -63,7 +63,8 @@
     var grid = mini.get("grid1");
 
     //动态设置URL
-    grid.setUrl("searchStudent.action");
+//    grid.setUrl("searchStudent.action");
+
     //也可以动态设置列 grid.setColumns([]);
 
     grid.load();
