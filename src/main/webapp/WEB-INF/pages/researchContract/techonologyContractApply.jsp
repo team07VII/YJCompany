@@ -18,7 +18,7 @@
     <script src="/resources/js/ajaxfileupload.js" type="text/javascript"></script>
     <style type="text/css">
         .header {
-            background: url(/resources/pics/tr-bkground.png) repeat-x 0 -1px;
+            background: url(/resources/images/tr-bkground.png) repeat-x 0 -1px;
             font-family: "Heiti SC";
             padding: 5px;
         }
@@ -64,21 +64,23 @@
 
         <tr width="100%">
             <td class="td1"><label>合同名称<span style="color: red">※</span></label></td>
-            <td class="td2"><input class="mini-textbox" width="100%" type="text" name="contractName"></td>
+            <%--必填项 填写实际合同的名称 required="true"--%>
+            <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text" name="contractName"></td>
             <td class="td1"><label>合同编号<span style="color: red">※</span></label></td>
-            <td class="td2"><input class="mini-textbox" width="100%" type="text" name="contractNo"></td>
+            <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text" name="contractNo"></td>
         </tr>
         <tr>
             <td class="td1">合同对方信息<span style="color:red;">※</span></td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" name="oppDesc"/>
+                <%--填写实际对方信息--%>
+                <input required="true" class="mini-textbox" width="100%" name="oppDesc"/>
             </td>
         </tr>
         <tr width="100%">
             <td class="td1"><label>合同起日期<span style="color: red">※</span></label></td>
-            <td class="td2"><input class="mini-datepicker" width="100%" name="contractBeginDate"></td>
+            <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractBeginDate"></td>
             <td class="td1"><label>合同止日期<span style="color: red">※</span></label></td>
-            <td class="td2"><input class="mini-datepicker" width="100%" name="contractEndDate"></td>
+            <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractEndDate"></td>
         </tr>
         <%----%>
         <tr>
@@ -86,30 +88,32 @@
         </tr>
         <%--未找到字段--%>
         <tr>
-            <td class="td1">总费用</td>
+            <td class="td1" iconCls="icon-collapse">总费用</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" name=""/>
+                <%--必填项、数字（保留2位小数,单位万元)--%>
+                <input required="true" vtype=“float" class="mini-textbox" width="100%" name=""/>
             </td>
             <td class="td1">对方拨付</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" name=""/>
+                <input required="true" vtype=“float" class="mini-textbox" width="100%" name=""/>
             </td>
         </tr>
         <tr>
             <td class="td1">公司自筹</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" name=""/>
+                <input required="true" vtype=“float" class="mini-textbox" width="100%" name=""/>
             </td>
         </tr>
-        <%----%>
+
         <tr>
             <td colspan="4" class="header" showSplitIcon="true">项目成果分配</td>
         </tr>
         <tr>
+            <%--checkboxlist至少选择一项--%>
             <td class="td1">产品形式</td>
             <td colspan="3" width="1000px" style="background: white">
                 <div id="cbl1" style="width:100%;"
-                     name="projType"
+                     name=""
                      class="mini-checkboxlist"
                      textField="text" valueField="id">
                 </div>
@@ -119,19 +123,19 @@
         <tr>
             <td class="td1">形成的知识产权及分配方式</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%" value="10" name=""/>
+                <input class="mini-textarea" width="100%" value="10" name="rightDesc"/>
             </td>
         </tr>
         <tr>
             <td class="td1">直接经济效益及分配方式</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%"  name=""/>
+                <input class="mini-textarea" width="100%"  name="benefitsDesc"/>
             </td>
         </tr>
         <tr>
             <td class="td1">形成的固定资产及分配方式</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%"  name=""/>
+                <input class="mini-textarea" width="100%"  name="fixedAssets"/>
             </td>
         </tr>
         <tr>
@@ -143,7 +147,7 @@
             <tr>
                 <td class="td1">运作说明</td>
                 <td class="righttd" id="upload">
-                    <input class="mini-htmlfile" name=""
+                    <input class="mini-htmlfile" name="contractRunDesc" buttonText="Browse"
                            id="file1" style="width:100%;"/>
                     <%--两个隐藏组件包含两个表单中的数据--%>
                     <input id="base" type="hidden" name="base">
@@ -157,11 +161,11 @@
         <tr>
             <td class="td1">总预算</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" value="1200.00" name="a14"/>
+                <input class="mini-textbox" width="100%" value="1200.00" name="totalBudget"/>
             </td>
             <td class="td1">公司经费</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%"  name="a15"/>
+                <input class="mini-textbox" width="100%"  name=""/>
             </td>
         </tr>
         <tr>
@@ -179,9 +183,11 @@
                 <td colspan="4" class="header">流程信息</td>
             </tr>
             <tr>
+                <%--人员卫星库选人控件，可多选--%>
                 <td class="td1">技术部经理</td>
                 <td class="td2">
-                    <input class="mini-textbox" width="100%"  name=""/>
+                    <input class="mini-textbox" width="100%"  name="CONTRACT_SIGNTORY">
+                    <td><a class="mini-button" iconCls="icon-user"></a></td>
                 </td>
 
             </tr>
@@ -214,7 +220,7 @@
 
     $("#cbl1").append(
         "<input type='text' name='oth' id='oth1' " +
-        "value='默认值' disabled='disabled'>");
+        "value='默认值' disabled='disabled' inline='true'>");
 
 
     function getForm() {
