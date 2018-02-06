@@ -26,7 +26,12 @@
         }
 
         td {
+
+            border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
+            padding: 2px;
+            background-color: RGB(239, 248, 254);;
+
             padding: 3px;
             height: 25px;
         }

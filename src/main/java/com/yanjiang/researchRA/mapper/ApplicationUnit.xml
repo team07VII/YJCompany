@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yanjiang.researchRA.mapper.ApplicationUnitMapper">
+
+    <sql id="ApplicationUnitColumns">
+        aid,aname
+    </sql>
+
+    <!--分页查询
+   在mapper文件中用#{属性名}的是取传递过来的参数值,如果传递过来的参数是一个基本类型则可以用#{value}获取
+   如果是pojo,则通过#{属性名}获取某个值-->
+    <select id="selectApplicationUnit"
+            resultType="com.yanjiang.researchRA.domain.ApplicationUnit"
+            parameterType="com.yanjiang.researchRA.page.PageBean">
+        SELECT
+        <include refid="ApplicationUnitColumns"/>
+         FROM `application_unit` WHERE aname LIKE '%${parameter.aname}%'
+        LIMIT #{startIndex},#{pageSize};
+    </select>
+
+    <!--获取学生表总条数-->
+    <select id="getTotalRecord"
+            resultType="java.lang.Integer"
+            parameterType="com.yanjiang.researchRA.page.PageBean">
+        SELECT COUNT(aid) FROM `application_unit` WHERE aname LIKE '%${parameter.aname}%'
+    </select>
+
+    <select id="selectAll" resultType="com.yanjiang.researchRA.domain.ApplicationUnit">
+        SELECT
+        <include refid="ApplicationUnitColumns"/>
+         FROM application_unit
+    </select>
+
+</mapper>
