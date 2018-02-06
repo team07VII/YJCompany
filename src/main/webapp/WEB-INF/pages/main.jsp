@@ -35,6 +35,7 @@
     <div title="采购监管平台系统" region="north" showSplitIcon="true"
          style="background-color: #e8ecf6; background:-moz-linear-gradient(top,#b2d1f5,grey); float: left;width: 100%;height: 15px">
         <span style="float: left"><h3>当前用户: ${username}</h3></span>
+        <button style="float: right" onclick="exit()">退出登录</button>
         <button style="float: right">个人工作台</button>
     </div>
     <div title="center" region="center"  >
@@ -62,6 +63,15 @@
         var item = e.item;
         iframe.src = item.url;
     }
+
+    function exit() {
+
+//        alert(111)
+        $.post("exit", function () {window.location = "login";})
+
+
+    }
+
 </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.yanjiang.researchRA.controller;
 
+import com.yanjiang.researchRA.service.RdmsProjBaseService;
 import com.yanjiang.researchRA.service.RdmsProjBudgetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,9 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("researchRA/")
 public class ResearchRAController {
+
+    @Resource
+    private RdmsProjBaseService projBaseService;
 
     @Resource
     private RdmsProjBudgetService projBudgetService;
@@ -40,8 +44,21 @@ public class ResearchRAController {
         return "researchRA/departmentManager";
     }
 
+//    工程师组织审核
+    @RequestMapping("engineerApproval")
+    public String engineerApproval(){
+        return "researchRA/engineerApproval";
+    }
+
+//    评审小组组长填写评审意见
+    @RequestMapping("teamLeaderApproval")
+    public String engineerReview(){
+        return "researchRA/teamLeaderApproval";
+    }
+
+
 //    测试数据库是否能运行
-    @RequestMapping("GetPlanTypeEnum")
+    @RequestMapping("insertGetPlanTypeEnum")
     public String GetPlanTypeEnum(){
 
 //        System.out.println("zheli");
