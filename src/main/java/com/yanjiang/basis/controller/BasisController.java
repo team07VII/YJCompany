@@ -64,7 +64,7 @@ public class BasisController {
     @RequestMapping("/selectPeople")
     public String selectPeople() {
 
-        System.out.println("selectPeople");
+//        System.out.println("selectPeople");
 
         return "page/SelectPeople";
     }
@@ -73,7 +73,7 @@ public class BasisController {
     @RequestMapping("/exit")
     public String exit(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().removeAttribute("username");
-        System.out.println("退出登录");
+//        System.out.println("退出登录");
         return "login";
     }
 

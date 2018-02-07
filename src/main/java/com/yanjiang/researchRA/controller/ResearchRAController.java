@@ -56,6 +56,17 @@ public class ResearchRAController {
         return "researchRA/teamLeaderApproval";
     }
 
+//    科技办经理审批
+    @RequestMapping("techonologyApproval")
+    public String techonologyApproval(){
+        return "researchRA/techonologyApproval";
+    }
+
+//    财务部审批
+    @RequestMapping("financeApproval")
+    public String financeApproval(){
+        return "researchRA/financeApproval";
+    }
 
 //    测试数据库是否能运行
     @RequestMapping("insertGetPlanTypeEnum")

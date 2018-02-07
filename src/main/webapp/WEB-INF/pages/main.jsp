@@ -18,31 +18,39 @@
     <script src="/resources/js/ajaxfileupload.js" type="text/javascript"></script>
 
     <style type="text/css">
-        table,td{
+        table, td {
             border: 1px solid #d5e9fa;
             border-collapse: collapse;
             padding: 1px;
             width: 99%;
         }
 
-        input{
+        input {
             height: 20px;
         }
     </style>
 </head>
 <body>
-<div id="layout1" class="mini-layout" style="width:100%;height:100%"  borderStyle="border:solid 1px #aaa;">
+<%--http://music.163.com/#/song?id=849739--%>
+<div id="layout1" class="mini-layout" style="width:100%;height:100%" borderStyle="border:solid 1px #aaa;">
     <div title="采购监管平台系统" region="north" showSplitIcon="true"
          style="background-color: #e8ecf6;float: left;width: 100%;height: 15px">
-        <span style="float: left"><h3>当前用户: ${username}</h3></span>
-        <button style="float: right" onclick="exit()">退出登录</button>
-        <button style="float: right">个人工作台</button>
+
+        <%-- 背景音乐 --%>
+        <%--<embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">--%>
+
+                <span style="float: left"><h3>当前用户: ${username}</h3></span>
+                <button style="float: right" onclick="exit()">退出登录</button>
+                <button style="float: right">个人工作台</button>
+
+                <%--</div>--%>
     </div>
-    <div title="center" region="center"  >
+    <div title="center" region="center">
         <div class="mini-splitter" style="width:99%;height:100%">
             <%--左侧menu--%>
             <div size="15%" showCollapseButton="true">
-                <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt" onitemselect="onItemSelect"
+                <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt"
+                     onitemselect="onItemSelect"
                      idField="id" parentField="pid" textField="text" borderStyle="border:0">
                 </div>
             </div>
@@ -67,7 +75,9 @@
     function exit() {
 
 //        alert(111)
-        $.post("exit", function () {window.location = "login";})
+        $.post("exit", function () {
+            window.location = "login";
+        })
 
 
     }

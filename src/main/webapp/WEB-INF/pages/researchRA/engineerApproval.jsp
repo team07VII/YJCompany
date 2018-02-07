@@ -16,30 +16,51 @@
     <script src="/resources/js/ajaxfileupload.js" type="text/javascript"></script>
     <link href="/resources/scripts/miniui/themes/blue/skin.css" rel="stylesheet" type="text/css"/>
     <style>
+        /*table {*/
+            /*width: 100%;*/
+            /*margin: 1px;*/
+            /*border: 1px solid #b6e5ff;*/
+            /*border-collapse: collapse;*/
+        /*}*/
+
+        /*td {*/
+            /*border-collapse: collapse;*/
+            /*padding: 5px;*/
+            /*height: 20px;*/
+            /*background-color: #c2e3ff;*/
+            /*border: 1px solid #37b9ff;*/
+        /*}*/
+
         table {
             width: 100%;
             margin: 1px;
-            border: 1px solid #b6e5ff;
-            border-collapse: collapse;
+            border: 1px solid gainsboro;
         }
 
         td {
+
+            border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
-            padding: 5px;
-            height: 20px;
-            background-color: #c2e3ff;
-            border: 1px solid #37b9ff;
+            padding: 2px;
+            background-color: RGB(239, 248, 254);;
+
+            padding: 3px;
+            height: 25px;
         }
 
         .trTitle {
             background-color: #daeeff;
             color: #427dc0;
-            border-collapse: collapse;
+        }
+
+        input {
+            height: 20px;
+            text-align: center;
+            vertical-align: text-bottom;
         }
 
     </style>
 </head>
-<etDa>
 <%--<form id="form">--%>
 <%--<div id="tabs1" style="width: 100%;height: 100%;border: 1px solid gainsboro" class="mini-tabs"--%>
 <%--activeIndex="0"--%>
@@ -120,7 +141,7 @@
             <%--</tr>--%>
             <tr>
                 <td style="width:120px">审评结果</td>
-                <td colspan="3"><input style="width: 100%;height: 90%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%;height: 90%" type="text" class="mini-textarea"/>
                 </td>
             </tr>
             <tr>
