@@ -1,12 +1,11 @@
 package com.yanjiang.researchRA.controller;
 
 import com.yanjiang.researchRA.domain.ApplicationUnit;
-import com.yanjiang.researchRA.domain.BaseResult;
+import com.yanjiang.basis.utils.BaseResult;
 import com.yanjiang.researchRA.service.ApplicationUnitService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;

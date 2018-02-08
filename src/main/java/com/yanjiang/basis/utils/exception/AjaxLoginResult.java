@@ -1,4 +1,4 @@
-package com.yanjiang.basis.utils.impl.exception;
+package com.yanjiang.basis.utils.exception;
 
 /**
  * Created by dllo on 17/11/8.

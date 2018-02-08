@@ -36,15 +36,14 @@
 <div class="mini-fit">
 
     <div id="grid1" class="mini-datagrid" style="width:100%;height:100%;"
-         idField="id" allowResize="true"
-         sizeList="[2,3,5,10]" pageSize="5"
+         idField="id" allowResize="true" url="/findPeople"
+         sizeList="[2,5,10]" pageSize="5"
          borderStyle="border-left:0;border-right:0;" onrowdblclick="onRowDblClick"
     >
         <div property="columns">
             <div type="indexcolumn"></div>
-            <div field="sid" width="120" headerAlign="center" allowSort="true">学生编号</div>
-            <div field="sname" width="100%" headerAlign="center" allowSort="true">学生姓名</div>
-            <div field="clazz.cname" width="100" headerAlign="center" allowSort="true">所在班级</div>
+            <div field="staffId" width="120" headerAlign="center" allowSort="true">员工编号</div>
+            <div field="staffName" width="100%" headerAlign="center" allowSort="true">员工姓名</div>
         </div>
     </div>
 
@@ -75,7 +74,7 @@
     }
     function search() {
         var key = mini.get("key").getValue();
-        grid.load({sname: key});
+        grid.load({staffName: key});
     }
     function onKeyEnter(e) {
         search();

@@ -1,4 +1,4 @@
-package com.yanjiang.basis.utils.impl.mail;
+package com.yanjiang.basis.utils.mail;
 
 //import com.lanou.mail.AttachBean;
 //import com.lanou.mail.Mail;

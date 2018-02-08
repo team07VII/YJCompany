@@ -69,7 +69,7 @@
                                                class="mini-buttonedit"
                                                allowInput="false"
                                                onbuttonclick="onPeopleButtonEdit"
-                                               name="sid" textName="sname"/>
+                                               name="staffId" textName="staffName"/>
                                     </td>
                                     <td style="width: 30%"></td>
                                     <td style="width:80px">关键字</td>
@@ -151,11 +151,27 @@
                                     <tr>
                                         <td style="width:80px">申请人</td>
                                         <td>
+
+                                            <%--<div id="datagrid1" class="mini-datagrid"--%>
+                                                 <%--url="/selectPeople"--%>
+                                                 <%--style="width: 100%;height: 60%"--%>
+                                                 <%--sizeList = "[2,5,10]"--%>
+                                                 <%--pageSize="5">--%>
+
+
+
+                                                <%--<div property="columns">--%>
+                                                    <%--<div field="staffId" width="120" headerAlign="center" allowSort="true">申报单位ID</div>--%>
+                                                    <%--<div field="staffName" width="120" headerAlign="center" allowSort="true">申报单位名称</div>--%>
+
+                                                <%--</div>--%>
+                                            <%--</div>--%>
+
                                             <input style="width: 200%"
                                                    class="mini-buttonedit"
                                                    allowInput="false"
                                                    onbuttonclick="onPeopleButtonEdit"
-                                                   name="sid" textName="sname"/>
+                                                   name="staffId" textName="staffName"/>
                                         </td>
                                         <td style="width: 30%"></td>
                                         <td style="width:80px">关键字</td>
@@ -252,6 +268,7 @@
 //        })
 //    }
 
+
     function onPeopleButtonEdit(e) {
         //加载mini组件 后面的get方法才好用
         var btnEdit = this;
@@ -267,8 +284,8 @@
                     var data = iframe.contentWindow.GetData();
                     data = mini.clone(data);    //必须
                     if (data) {
-                        btnEdit.setValue(data.sid);
-                        btnEdit.setText(data.sname);
+                        btnEdit.setValue(data.staffId);
+                        btnEdit.setText(data.staffName);
                     }
                 }
 

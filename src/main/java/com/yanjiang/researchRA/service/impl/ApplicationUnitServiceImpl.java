@@ -1,9 +1,9 @@
 package com.yanjiang.researchRA.service.impl;
 
+import com.yanjiang.basis.utils.BaseResult;
+import com.yanjiang.basis.utils.PageBean;
 import com.yanjiang.researchRA.domain.ApplicationUnit;
-import com.yanjiang.researchRA.domain.BaseResult;
 import com.yanjiang.researchRA.mapper.ApplicationUnitMapper;
-import com.yanjiang.researchRA.page.PageBean;
 import com.yanjiang.researchRA.service.ApplicationUnitService;
 import org.springframework.stereotype.Service;
 
@@ -39,7 +39,7 @@ public class ApplicationUnitServiceImpl implements ApplicationUnitService {
         pageBean.setParameter(applicationUnit);
 
         /*获取当前页数据*/
-        List<ApplicationUnit> data = applicationUnitMapper.selectApplicationUnit(pageBean);
+        List<ApplicationUnit> data = applicationUnitMapper.selectPageBean(pageBean);
 
         /*将总记录数与当前页data数据设置到BaseResult对象中*/
         result.setTotal(total);

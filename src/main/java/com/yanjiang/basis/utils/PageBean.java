@@ -1,5 +1,6 @@
-package com.yanjiang.researchRA.page;
+package com.yanjiang.basis.utils;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * 用于分页查询
  * @param <T>
  */
-public class PageBean<T> {
+public class PageBean<T> implements Serializable {
     private T parameter;  //用于条件查询的对象
 
     // 必选项

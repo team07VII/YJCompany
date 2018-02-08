@@ -1,9 +1,11 @@
 package com.yanjiang.researchRA.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by dllo on 18/2/5.
  */
-public class RdmsProjBudget {
+public class RdmsProjBudget implements Serializable {
 
     private String budDetailId;
     private String busiTable;

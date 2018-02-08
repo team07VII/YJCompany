@@ -1,5 +1,6 @@
-package com.yanjiang.researchRA.domain;
+package com.yanjiang.basis.utils;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * 封装miniui中分页显示的结果集
  * @param <T>
  */
-public class BaseResult<T> {
+public class BaseResult<T> implements Serializable {
 
     private int total;//总记录数
     private List<T> data;//当页数据集合

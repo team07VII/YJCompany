@@ -3,8 +3,8 @@
 <html>
 
 <head>
-    <link href="../../css/demo.css" rel="stylesheet" type="text/css">
-    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    <link href="../../../resources/css/demo.css" rel="stylesheet" type="text/css">
+    <script src="../../../resources/scripts/boot.js" type="text/javascript"></script>
 
     <style>
 

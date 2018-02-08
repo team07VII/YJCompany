@@ -1,4 +1,4 @@
-package com.yanjiang.basis.utils.impl.exception;
+package com.yanjiang.basis.utils.exception;
 
 import java.util.UUID;
 
