@@ -5,17 +5,17 @@
 <mapper namespace="com.yanjiang.yjStaff.mapper.YjStaffMapper">
 
     <sql id="userColumns">
-        s.staff_id,s.staff_username,s.staff_pwd
+        s.staff_id,s.staff_name,s.staff_username,s.staff_pwd
     </sql>
 
     <sql id="usernameSql">
         <where>
             1 = 1
-            <if test="staffUsername != null and staffUsername != '' ">
-                AND s.staff_username = #{staffUsername}
+            <if test="userName != null and userName != '' ">
+                AND s.staff_username = #{userName}
             </if>
-            <if test="staffPwd != null and staffPwd != '' ">
-                AND s.staff_pwd = #{staffPwd}
+            <if test="pwd != null and pwd != '' ">
+                AND s.staff_pwd = #{pwd}
             </if>
         </where>
     </sql>
@@ -25,7 +25,7 @@
         select
         <include refid="userColumns"/>
         from yj_staff s
-        where s.staff_username=#{staffUsername} AND s.staff_pwd=#{staffPwd}
+        where s.staff_username=#{userName} AND s.staff_pwd=#{pwd}
     </select>
 
     <!--分页查询

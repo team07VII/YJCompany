@@ -1,11 +1,9 @@
 package com.yanjiang.basis.utils.shiro;
 
 
+import com.yanjiang.yjStaff.domain.YjStaff;
 import com.yanjiang.yjStaff.service.YjStaffService;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
@@ -76,32 +74,16 @@ public class PerRealm extends AuthorizingRealm {
 //        获取用户输入的密码
         String password = new String((char[]) authenticationToken.getCredentials());
 
-//        User user = userService.selectByUserName(username);
+        YjStaff user = yjStaffService.selectByUserName(username, password);
 
 //        如果能查找 则返回一个认证器对象
-//        if (user == null){
-//            throw new UnknownAccountException("用户名不存在");
-//        }
-
-
-//        此处应该拿username去数据库查询, 是否存在该用户
-
-//        =======> 下面为模拟代码: <======
-//        if (!"wangwu".equals(username)){
-//            throw new UnknownAccountException("用户名不存在");
-//        }
-//        =======> 模拟结束 <======
-
-//        =======> 下面为模拟代码: <======
-//        if (!"1234".equals(password)){
-//            throw new IncorrectCredentialsException("密码错误");
-//        }
-//        =======> 模拟结束 <======
+        if (user == null){
+            throw new UnknownAccountException("用户名或密码错误");
+        }
 
 
 //        返回认证成功的信息
-//        return new SimpleAuthenticationInfo(user.getUserName(), user.getPassword(), getName());
-        return new SimpleAuthenticationInfo(username, username, getName());
+        return new SimpleAuthenticationInfo(user.getStaffName(), user.getStaffPwd(), getName());
 
     }
 }
