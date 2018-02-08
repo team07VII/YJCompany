@@ -119,7 +119,7 @@
             <td class="td1">产品形式</td>
             <td colspan="3" width="1000px" style="background: white">
                 <div id="cbl1" style="width:100%;"
-                     name=""
+                     name="projType"
                      class="mini-checkboxlist"
                      textField="text" valueField="id">
                 </div>

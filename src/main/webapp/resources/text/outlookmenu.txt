@@ -19,4 +19,5 @@
     { id: "financialApproval", pid: "science", text: "财务部审批", url: "researchRA/financialApproval" },
     { id: "managerApproval", pid: "science", text: "总经理审批", url: "researchContract/managerApproval" }
 
+
 ]
