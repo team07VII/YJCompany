@@ -5,6 +5,10 @@ import com.yanjiang.basis.utils.GEETEST.GeetestConfig;
 import com.yanjiang.basis.utils.GEETEST.GeetestLib;
 import com.yanjiang.yjStaff.domain.YjStaff;
 import com.yanjiang.yjStaff.service.YjStaffService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +45,23 @@ public class BasisController {
             return "login";
         }
 
-        request.getSession().setAttribute("username", username);
+//        1. 获取当前Subject的用户对象
+        Subject currentUser = SecurityUtils.getSubject();
+
+//        2. 创建用户名/密码的token令牌
+        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+
+//        3. 执行shiro认证
+        try {
+            currentUser.login(token);
+        }catch (AuthenticationException e){
+//            System.out.println("认证失败");
+            model.addAttribute("msg", "用户名或密码错误");
+            return "login";
+        }
+
+
+        request.getSession().setAttribute("username", token.getUsername());
         model.addAttribute("msg", "");
 
         return "main";
@@ -109,8 +129,13 @@ public class BasisController {
     //    退出登录
     @RequestMapping("/exit")
     public String exit(HttpServletRequest request, HttpServletResponse response) {
+
         request.getSession().removeAttribute("username");
-//        System.out.println("退出登录");
+
+        Subject currentUser = SecurityUtils.getSubject();
+
+        currentUser.logout();
+
         return "login";
     }
 
@@ -164,6 +189,14 @@ public class BasisController {
             out.println(resStr);
 
         return "";
+    }
+
+    @RequestMapping("hikibi")
+    public String hikibi(){
+
+        SecurityUtils.getSubject().login(new UsernamePasswordToken("admin", "admin"));
+
+        return "main";
     }
 
 }

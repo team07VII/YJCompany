@@ -6,12 +6,13 @@ package com.yanjiang.yjStaff.mapper;
 
 import com.yanjiang.basis.utils.PageBean;
 import com.yanjiang.yjStaff.domain.YjStaff;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface YjStaffMapper {
 
-    YjStaff selectByUserName(String userName, String pwd);
+    YjStaff selectByUserName(@Param("userName") String userName, @Param("pwd") String pwd);
 
     List<YjStaff> selectPageBean(PageBean<YjStaff> pageBean);
 

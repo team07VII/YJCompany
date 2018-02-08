@@ -12,7 +12,6 @@
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-
     <link rel='stylesheet prefetch' href='<c:url value="/resources/css/34b729901a37198f5d0414728.css"/>'>
     <link rel="stylesheet" href="<c:url value="/resources/css/style1.css"/>">
     <style type="text/css">
