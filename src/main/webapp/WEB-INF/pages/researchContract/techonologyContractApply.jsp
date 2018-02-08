@@ -18,7 +18,7 @@
     <script src="/resources/js/ajaxfileupload.js" type="text/javascript"></script>
     <style type="text/css">
         .header {
-            background: url(/resources/images/tr-bkground.png) repeat-x 0 -1px;
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0 ;
             font-family: "Heiti SC";
             padding: 5px;
         }
@@ -27,15 +27,19 @@
             width: 100%;
             height: auto;
             /*border: 0px solid #ffffff;*/
-            border-collapse: collapse;
-            padding: 0px;
+            border: 1px solid gainsboro;
+            padding: 1px;
         }
 
         td {
+
             border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
             padding: 2px;
             background-color: RGB(239, 248, 254);;
+
+            padding: 3px;
+            height: 25px;
         }
 
         .td1 {
@@ -47,8 +51,6 @@
             width: 40%;
             background-color: white;
         }
-
-
     </style>
 </head>
 <body>
@@ -56,35 +58,39 @@
     <table class="form-table" id="formtable" border="0" cellpadding="1" cellspacing="2">
         <%----%>
         <tr>
-            <td colspan="4" class="header">当前位置: 科研项目申报 >> 科研项目合同申请表</td>
+            <td style="color:rgb(38,64,140)"; colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-goto"></div><strong>当前位置: 科研项目申报 >> 科研项目合同申请表</strong></td>
         </tr>
-        <tr>
-            <td colspan="4" class="header">申请信息</td>
-        </tr>
+            <tr>
+                <td style="color:rgb(38,64,140);" colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div><strong>申请信息</strong></td>
+            </tr>
 
-        <tr width="100%">
-            <td class="td1"><label>合同名称<span style="color: red">※</span></label></td>
-            <%--必填项 填写实际合同的名称 required="true"--%>
-            <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text" name="contractName"></td>
-            <td class="td1"><label>合同编号<span style="color: red">※</span></label></td>
-            <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text" name="contractNo"></td>
-        </tr>
-        <tr>
-            <td class="td1">合同对方信息<span style="color:red;">※</span></td>
-            <td class="td2">
-                <%--填写实际对方信息--%>
-                <input required="true" class="mini-textbox" width="100%" name="oppDesc"/>
-            </td>
-        </tr>
-        <tr width="100%">
-            <td class="td1"><label>合同起日期<span style="color: red">※</span></label></td>
-            <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractBeginDate"></td>
-            <td class="td1"><label>合同止日期<span style="color: red">※</span></label></td>
-            <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractEndDate"></td>
-        </tr>
+            <tr width="100%">
+                <td class="td1"><label>合同名称<span style="color: red">※</span></label></td>
+                <%--必填项 填写实际合同的名称 required="true"--%>
+                <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text"
+                                       name="contractName"></td>
+                <td class="td1"><label>合同编号<span style="color: red">※</span></label></td>
+                <td class="td2"><input required="true" class="mini-textbox" width="100%" type="text" name="contractNo">
+                </td>
+            </tr>
+            <tr>
+                <td class="td1">合同对方信息<span style="color:red;">※</span></td>
+                <td class="td2">
+                    <%--填写实际对方信息--%>
+                    <input required="true" class="mini-textbox" width="100%" name="oppDesc"/>
+                </td>
+            </tr>
+            <tr width="100%">
+                <td class="td1"><label>合同起日期<span style="color: red">※</span></label></td>
+                <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractBeginDate">
+                </td>
+                <td class="td1"><label>合同止日期<span style="color: red">※</span></label></td>
+                <td class="td2"><input required="true" class="mini-datepicker" width="100%" name="contractEndDate"></td>
+            </tr>
+
         <%----%>
         <tr>
-            <td colspan="4" class="header">合同经费信息</td>
+            <td height="26px" style="color:rgb(38,64,140);" colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div><strong>合同经费信息</strong></td>
         </tr>
         <%--未找到字段--%>
         <tr>
@@ -106,7 +112,7 @@
         </tr>
 
         <tr>
-            <td colspan="4" class="header" showSplitIcon="true">项目成果分配</td>
+            <td height="26px" style="color:rgb(38,64,140);" colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div><strong>项目成果分配</strong></td>
         </tr>
         <tr>
             <%--checkboxlist至少选择一项--%>
@@ -129,34 +135,34 @@
         <tr>
             <td class="td1">直接经济效益及分配方式</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%"  name="benefitsDesc"/>
+                <input class="mini-textarea" width="100%" name="benefitsDesc"/>
             </td>
         </tr>
         <tr>
             <td class="td1">形成的固定资产及分配方式</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%"  name="fixedAssets"/>
+                <input class="mini-textarea" width="100%" name="fixedAssets"/>
             </td>
         </tr>
         <tr>
             <td class="td1">合同运作形式简介</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%"  name=""/>
+                <input class="mini-textarea" width="100%" name=""/>
             </td>
         </tr>
-            <tr>
-                <td class="td1">运作说明</td>
-                <td class="righttd" id="upload">
-                    <input class="mini-htmlfile" name="contractRunDesc" buttonText="Browse"
-                           id="file1" style="width:100%;"/>
-                    <%--两个隐藏组件包含两个表单中的数据--%>
-                    <input id="base" type="hidden" name="base">
-                    <input id="other" type="hidden" name="other">
-                </td>
-            </tr>
+        <tr>
+            <td class="td1">运作说明</td>
+            <td class="righttd" id="upload">
+                <input class="mini-htmlfile" name="contractRunDesc" buttonText="Browse"
+                       id="file1" style="width:100%;"/>
+                <%--两个隐藏组件包含两个表单中的数据--%>
+                <input id="base" type="hidden" name="base">
+                <input id="other" type="hidden" name="other">
+            </td>
+        </tr>
         <%----%>
         <tr>
-            <td colspan="4" class="header">预算信息</td>
+            <td height="26px" style="color:rgb(38,64,140);" colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div><strong>预算信息</strong></td>
         </tr>
         <tr>
             <td class="td1">总预算</td>
@@ -165,39 +171,40 @@
             </td>
             <td class="td1">公司经费</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%"  name=""/>
+                <input class="mini-textbox" width="100%" name=""/>
             </td>
         </tr>
         <tr>
             <td class="td1">外部支持经费</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%"  name=""/>
+                <input class="mini-textbox" width="100%" name=""/>
             </td>
             <td class="td1">国家经费</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%"  name=""/>
+                <input class="mini-textbox" width="100%" name=""/>
             </td>
         </tr>
         <%----%>
-            <tr>
-                <td colspan="4" class="header">流程信息</td>
-            </tr>
-            <tr>
-                <%--人员卫星库选人控件，可多选--%>
-                <td class="td1">技术部经理</td>
-                <td class="td2">
-                    <input class="mini-textbox" width="100%"  name="CONTRACT_SIGNTORY">
-                    <td><a class="mini-button" iconCls="icon-user"></a></td>
-                </td>
+        <tr>
+            <td height="26px" style="color:rgb(38,64,140);" colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div><strong>流程信息 </strong></td>
+        </tr>
+        <tr>
+            <%--人员卫星库选人控件，可多选--%>
+            <td class="td1">技术部经理</td>
+            <td class="td2">
+                <input class="mini-textbox" width="100%" name="CONTRACT_SIGNTORY">
+            <td><a class="mini-button" iconCls="icon-user"></a></td>
+            </td>
 
-            </tr>
-            <%----%>
-            <tr>
-                <td colspan="4" style="text-align: right">
-                    <a class="mini-button" iconCls="icon-collapse" onclick="submit88()">提交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                </td>
-                <td></td>
-            </tr>
+        </tr>
+        <%----%>
+        <tr>
+            <td colspan="4" style="text-align: right">
+                <a class="mini-button" iconCls="icon-collapse" onclick="submit88()">提交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            </td>
+            <td></td>
+        </tr>
     </table>
 
 </form>
@@ -217,10 +224,13 @@
         {"id": "cb08", "text": "其他"}
     ];
     cbl1.setData(arr);
+    if (arr.indexOf(7).checked) {
+        alert(aaaaa);
+    }
 
-    $("#cbl1").append(
-        "<input type='text' name='oth' id='oth1' " +
-        "value='默认值' disabled='disabled' inline='true'>");
+//    $("#cbl1").append(
+//        "<input type='text' name='oth' id='oth1' " +
+//        "value='默认值' disabled='disabled' inline='true'>");
 
 
     function getForm() {

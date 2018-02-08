@@ -17,46 +17,60 @@
     <script src="/resources/scripts/thirdparty/swfupload/swfupload.js" type="text/javascript"></script>
     <script src="/resources/js/ajaxfileupload.js" type="text/javascript"></script>
     <style>
-        .table1 {
+        table {
             width: 100%;
             margin: 1px;
             border: 1px solid gainsboro;
+            /*border-collapse: collapse;*/
         }
         td {
+            border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
+            padding: 2px;
+            background-color: RGB(239, 248, 254);;
             padding: 3px;
-            height: 20px;
+            height: 25px;
+        }
+        .header {
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0  ;
+            font-family: "Heiti SC";
+            padding: 3px;
         }
 
-        .trTitle {
-            background-color: #daeeff;
-            color: #427dc0;
-        }
+        /*table {*/
+            /*width: 100%;*/
+            /*height: auto;*/
+            /*!*border: 0px solid #ffffff;*!*/
+            /*border-collapse: collapse;*/
+            /*padding: 0px;*/
+        /*}*/
 
     </style>
 </head>
 <body>
 <div id="tabs1" class="mini-tabs" activeIndex="0" style="width:100%;height:100%;" plain="false">
     <div title="待办任务" >
-        <table cellpadding="1" cellspacing="2" class="table1">
+        <table>
             <tr>
-                <td class="trTitle" colspan="4">当前位置: 个人工作平台 >> 待办任务</td>
+                <td style="color:rgb(38,64,140)"; colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-goto"></div><strong>当前位置: 个人工作平台 >> 待办任务</strong></td>
             </tr>
             <tr>
                 <td>
                     <div id="layout1" class="mini-layout" style="width:100%; height: 150px;" borderStyle="border:solid 1px #aaa;">
-                        <div title="查询条件" style="background-color: #daeeff" region="north" height="150" showSplitIcon="true" >
+                        <div title="查询条件"  class="mini-panel" margin-top="0px" margin-left="0px" iconCls="icon-downgrade"
+                             style="width:100%;height: 200px;background: url(/resources/images/tr-bkground1.png) repeat-x 0;"
+                             showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true" collapseOnTitleClick="true">
                             <table>
                                 <tr>
                                     <td style="width:80px">申请时间</td>
                                     <td>
                                         <%--<input id="date2" style="width: 200%" class="mini-datepicker"/>--%>
-                                        <input property="editor" class="mini-datepicker" style="width:200%;"/>
+                                        <input property="editor" class="mini-datepicker" style="width:100%;"/>
                                     </td>
-                                    <td style="width: 30%"></td>
+                                    <td style="width: 20%"></td>
                                     <td style="width:80px">流程名称</td>
                                     <td>
-                                        <input style="width:200%;"class="mini-buttonedit"
+                                        <input style="width:100%;"class="mini-buttonedit"
                                                allowInput="false"
                                                onbuttonclick="onStudentButtonEdit"
                                                name="sid" textName="sname"/>
@@ -65,25 +79,25 @@
                                 <tr>
                                     <td style="width:80px">申请人</td>
                                     <td>
-                                        <input style="width: 200%"
+                                        <input style="width: 100%"
                                                class="mini-buttonedit"
                                                allowInput="false"
                                                onbuttonclick="onPeopleButtonEdit"
                                                name="sid" textName="sname"/>
                                     </td>
-                                    <td style="width: 30%"></td>
+                                    <td style="width: 20%"></td>
                                     <td style="width:80px">关键字</td>
                                     <td>
-                                        <input style="width: 200%"/>
+                                        <input style="width: 100%"/>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td style="width:80px">所属部门</td>
                                     <td>
-                                        <input style="width: 200%"/>
+                                        <input style="width: 100%"/>
                                     </td>
-                                    <td style="width: 30%"></td>
+                                    <td style="width: 20%"></td>
                                 </tr>
                             </table>
                         </div>
@@ -124,54 +138,56 @@
         </table>
     </div>
     <div title="已办任务" >
-        <table cellpadding="1" cellspacing="2" class="table1">
+        <table>
             <tr>
-                <td class="trTitle" colspan="4">当前位置: 个人工作平台 >> 已办任务</td>
+                <td style="color:rgb(38,64,140)"; colspan="4" class="header"><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-goto"></div><strong>当前位置: 个人工作平台 >> 待办任务</strong></td>
             </tr>
             <tr>
                 <td>
-                    <div id="layout2" class="mini-layout" style="width:100%; height: 150px;" borderStyle="border:solid 1px #aaa;">
-                        <div title="查询条件" style="background-color: #daeeff" region="north" height="150" showSplitIcon="true" >
-                                <table>
-                                    <tr>
-                                        <td style="width:80px">申请时间</td>
-                                        <td>
-                                            <%--<input id="date2" style="width: 200%" class="mini-datepicker"/>--%>
-                                                <input property="editor" class="mini-datepicker" style="width:200%;"/>
-                                        </td>
-                                        <td style="width: 30%"></td>
-                                        <td style="width:80px">流程名称</td>
-                                        <td>
-                                            <input style="width:200%;"class="mini-buttonedit"
-                                                   allowInput="false"
-                                                   onbuttonclick="onStudentButtonEdit"
-                                                   name="sid" textName="sname"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:80px">申请人</td>
-                                        <td>
-                                            <input style="width: 200%"
-                                                   class="mini-buttonedit"
-                                                   allowInput="false"
-                                                   onbuttonclick="onPeopleButtonEdit"
-                                                   name="sid" textName="sname"/>
-                                        </td>
-                                        <td style="width: 30%"></td>
-                                        <td style="width:80px">关键字</td>
-                                        <td>
-                                            <input style="width: 200%"/>
-                                        </td>
+                    <div id="layout1" class="mini-layout" style="width:100%; height: 150px;" borderStyle="border:solid 1px #aaa;">
+                        <div title="查询条件"  class="mini-panel" margin-top="0px" margin-left="0px" iconCls="icon-downgrade"
+                             style="width:100%;height: 200px;background: url(/resources/images/tr-bkground1.png) repeat-x 0;"
+                             showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true" collapseOnTitleClick="true">
+                            <table>
+                                <tr>
+                                    <td style="width:80px">申请时间</td>
+                                    <td>
+                                        <%--<input id="date2" style="width: 200%" class="mini-datepicker"/>--%>
+                                        <input property="editor" class="mini-datepicker" style="width:100%;"/>
+                                    </td>
+                                    <td style="width: 20%"></td>
+                                    <td style="width:80px">流程名称</td>
+                                    <td>
+                                        <input style="width:100%;"class="mini-buttonedit"
+                                               allowInput="false"
+                                               onbuttonclick="onStudentButtonEdit"
+                                               name="sid" textName="sname"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:80px">申请人</td>
+                                    <td>
+                                        <input style="width: 100%"
+                                               class="mini-buttonedit"
+                                               allowInput="false"
+                                               onbuttonclick="onPeopleButtonEdit"
+                                               name="sid" textName="sname"/>
+                                    </td>
+                                    <td style="width: 20%"></td>
+                                    <td style="width:80px">关键字</td>
+                                    <td>
+                                        <input style="width: 100%"/>
+                                    </td>
 
-                                    </tr>
-                                    <tr>
-                                        <td style="width:80px">所属部门</td>
-                                        <td>
-                                            <input style="width: 200%"/>
-                                        </td>
-                                        <td style="width: 30%"></td>
-                                    </tr>
-                                </table>
+                                </tr>
+                                <tr>
+                                    <td style="width:80px">所属部门</td>
+                                    <td>
+                                        <input style="width: 100%"/>
+                                    </td>
+                                    <td style="width: 20%"></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </td>
@@ -183,7 +199,7 @@
             </tr>
             <tr>
                 <td>
-                    <div id="listbox3" class="mini-listbox" style="width:100%;"
+                    <div id="listbox2" class="mini-listbox" style="width:100%;"
                          value="cn" onvaluechanged="onListBoxValueChanged"
                          url="/resources/text/countrys.txt" showCheckBox="true" multiSelect="true" >
                         <div property="columns">
@@ -201,7 +217,7 @@
             <tr>
                 <td>
                     <div class="mini-pager" style="width:100%;background:#f0f3f7;border:solid 1px #ccc;    "
-                         totalCount="${sessionScope.pageBean.totalPage} " onpagechanged="onPageChanged" sizeList="[5,10,20,100]"
+                         totalCount="${session.pageBean.totalPage}" onpagechanged="onPageChanged" sizeList="[5,10,20,100]"
                          showPageSize="true" showPageIndex="true" showPageInfo="true"
                          buttons="#buttons">
                     </div>
