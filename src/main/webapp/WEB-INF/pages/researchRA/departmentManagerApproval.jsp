@@ -102,16 +102,21 @@
                 </tr>
                 <tr>
                     <td style="width:120px">审批意见</td>
-                    <td><input  style="width: 100%"
-                               class="mini-textarea"
-                                />
+                    <td >
+                        <div id="listbox1" class="mini-listbox" onvaluechanged="remove1()" style="width:350px;height:150px;"
+                             multiSelect="false" >
+                        </div>
                     </td>
-                    <td style="width:120px">常用词条 </td>
-                    <td><input  style="width: 100%"
-                               class="mini-textarea"/>
+                    <td style="width:120px">常用词条</td>
+                    <td>
+
+                        <div id="listbox2" class="mini-listbox" multiSelect="false" onvaluechanged="add()" style="width:350px;height:150px;"
+                             textField="text"
+                             url="/resources/text/listboxText.txt">
+
+                        </div>
                     </td>
                 </tr>
-
                 <tr>
                     <td class="trTitle" style="width: 100%;text-align: center" colspan="4">
                         <input type="submit" onclick="submitForm()" value="通过">
@@ -128,6 +133,29 @@
 
 <script type="text/javascript">
     mini.parse();
+
+    var listbox1 = mini.get("listbox1");
+    var listbox2 = mini.get("listbox2");
+
+    function add() {
+
+        var items = listbox2.getSelecteds();
+        console.log(items);
+        listbox2.removeItems(items);
+        listbox1.addItems(items);
+        listbox2.readOnly=true;
+    }
+    function remove1() {
+        var items = listbox1.getSelecteds();
+        console.log(items);
+        listbox1.removeItems(items);
+        listbox2.addItems(items);
+        listbox2.readOnly=false;
+
+
+
+
+    }
 
     function onCombineUnit(e) {
         //加载mini组件 后面的get方法才好用
