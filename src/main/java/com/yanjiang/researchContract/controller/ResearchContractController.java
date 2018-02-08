@@ -14,9 +14,9 @@ public class ResearchContractController {
     public String techonologyContractApply(){
         return "researchContract/techonologyContractApply";
     }
-    @RequestMapping("personalWorkbenchComplete")
+    @RequestMapping("managerApproval")
     public String personalWorkbenchComplete(){
-        return "researchContract/personalWorkbenchComplete";
+        return "researchContract/managerApproval";
     }
 
 }

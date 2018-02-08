@@ -2,9 +2,8 @@
     { id: "front", text: "首页",},
 	{ id: "frontPage", pid: "front", text: "公司简介", url: "page/RightBody_Welcome" },
 
-
 	{ id: "user", text: "个人中心",},
-	{ id: "addUser", pid: "user", text: "个人工作平台", url: "RightBody_Personal" },
+	{ id: "addUser", pid: "user", text: "个人工作平台", url: "page/RightBody_Welcome" },
 
 	{ id: "right", text: "综合管理",},
     { id: "management", pid: "right", text: "管理", url: "RightBody_Manage" },
@@ -13,7 +12,6 @@
     { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报", url: "researchContract/techonologyContractApply"},
     { id: "engineerApproval", pid: "science", text: "工程师组织审核", url: "researchRA/engineerApproval" },
     { id: "engineerApproval", pid: "science", text: "评审小组组长填写评审意见", url: "researchRA/teamLeaderApproval" },
-    { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报",url: "researchContract/techonologyContractApply"},
     { id: "projectApplyBasic", pid: "science", text: "科研项目申报", url: "researchRA/projectApplyBasic" },
     { id: "departmentManagerApproval", pid: "science", text: "部门经理审批", url: "researchRA/departmentManagerApproval" },
     { id: "technologyManagerApproval", pid: "science", text: "科技办经理审批", url: "researchRA/technologyManagerApproval" },
