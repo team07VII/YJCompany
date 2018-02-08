@@ -90,4 +90,16 @@ public class ResearchRAController {
         return "researchRA/departmentManagerApproval";
     }
 
+    @RequestMapping("/insert")
+    public String insert(RdmsProjBase rdmsProjBase){
+        System.out.println(rdmsProjBase);
+
+        projBaseService.insert(rdmsProjBase);
+        return "researchRA/projectApplyBasic";
+
+
+
+
+    }
+
 }

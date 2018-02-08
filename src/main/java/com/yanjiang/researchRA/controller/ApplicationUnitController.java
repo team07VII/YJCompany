@@ -26,14 +26,15 @@ public class ApplicationUnitController {
     public BaseResult<ApplicationUnit> selectApplicationUnit(int pageIndex,int pageSize,ApplicationUnit applicationUnit ){
 
         System.out.println(applicationUnit);
+        BaseResult<ApplicationUnit> result = null;
 
-        BaseResult<ApplicationUnit> result = applicationUnitService.pageSelect(pageIndex, pageSize, applicationUnit);
+        try {
 
-//        List<ApplicationUnit> data = result.getData();
-//
-//        for (ApplicationUnit unit : data) {
-//            System.out.println(unit);
-//        }
+        result = applicationUnitService.pageSelect(pageIndex, pageSize, applicationUnit);
+        }catch (Exception e){
+            return null;
+        }
+
 
         return result;
     }

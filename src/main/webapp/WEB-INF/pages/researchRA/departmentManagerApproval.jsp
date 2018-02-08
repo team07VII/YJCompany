@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>部门经理审批</title>
     <link rel="stylesheet" href="/resources/css/demo.css">
 
     <script src="/resources/scripts/boot.js" type="text/javascript"></script>
@@ -118,9 +118,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="trTitle" style="width: 100%;text-align: center" colspan="4">
-                        <input type="submit" onclick="submitForm()" value="通过">
-                        <input type="reset" value="驳回">
+                    <td colspan="4" style="background-color: #e0e0e0">
+                        <a style="float: right; margin-right: 50px" onclick="agree()" class="mini-button"
+                           iconCls="icon-ok">通过</a>
+                        <a style="float: right; margin-right: 50px" onclick="disagree()" class="mini-button"
+                           iconCls="icon-no">不通过</a>
                     </td>
                 </tr>
 
