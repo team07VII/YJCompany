@@ -1,9 +1,11 @@
 package com.yanjiang.researchRA.controller;
 
+import com.yanjiang.researchRA.domain.RdmsProjBase;
 import com.yanjiang.researchRA.service.RdmsProjBaseService;
 import com.yanjiang.researchRA.service.RdmsProjBudgetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 
@@ -56,6 +58,19 @@ public class ResearchRAController {
         return "researchRA/teamLeaderApproval";
     }
 
+//    科技办经理审批
+    @RequestMapping("technologyManagerApproval")
+    public String technologyManagerApproval(){
+        return "researchRA/technologyManagerApproval";
+    }
+
+//      财务部审批
+    @RequestMapping("financialApproval")
+    public String financialApproval(){
+        return "researchRA/financialApproval";
+    }
+
+
 
 //    测试数据库是否能运行
     @RequestMapping("insertGetPlanTypeEnum")
@@ -74,5 +89,17 @@ public class ResearchRAController {
     public String departmentManagerApproval(){
         return "researchRA/departmentManagerApproval";
     }
+
+//    @RequestMapping("insert")
+//    public ModelAndView insert(RdmsProjBase rdmsProjBase){
+//        System.out.println(rdmsProjBase);
+//        ModelAndView mv = new ModelAndView();
+//       mv.setViewName("researchRA/success");
+//        mv.addObject("data",rdmsProjBase);
+//        projBaseService.insert(rdmsProjBase);
+//        return mv;
+//
+//
+//    }
 
 }

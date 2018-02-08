@@ -36,8 +36,10 @@
             height: 25px;
         }
 
+
         .trTitle {
-            background-color: #daeeff;
+
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0 ;
             color: #427dc0;
         }
 
@@ -45,6 +47,10 @@
             height: 20px;
             text-align: center;
             vertical-align: text-bottom;
+        }
+
+        html body .user_add .mini-buttonedit-icon {
+            background: url(/resources/scripts/miniui/res/images/user_add.png) no-repeat 50% 50%;
         }
     </style>
 </head>
@@ -58,26 +64,26 @@
         <div title="项目基本信息" >
             <table cellpadding="1" cellspacing="2" class="table1">
                 <tr>
-                    <td class="trTitle" colspan="4">项目名称</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">项目基本信息</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目名称 <font color="red">※</font></td>
-                    <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" required="true" name="projName"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目申报单位 <font color="red">※</font></td>
                     <td><input id="btnEdit2" style="width: 100%"
-                               class="mini-buttonedit"
+                               class="mini-buttonedit user_add"
                                allowInput="false"
                                onbuttonclick="onApplicationUnit"
-                               name="cid" textName="cname" required="true"/>
+                               name="aid" textName="aname" required="true"/>
                     </td>
                     <td style="width:120px">联合申报单位 <font color="red">※</font></td>
                     <td><input id="btnEdit3" style="width: 100%"
-                               class="mini-buttonedit"
+                               class="mini-buttonedit user_add"
                                allowInput="false"
                                onbuttonclick="onCombineUnit"
-                               name="cid" textName="cname" required="true"/>
+                               name="aid" textName="aname" required="true"/>
                     </td>
                 </tr>
                 <tr>
@@ -85,7 +91,7 @@
                     <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="width:100px">与核电生产运营安全性、可靠性、经济的适应分析</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">与核电生产运营安全性,可靠性,经济的适应分析</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">安全性</td>
@@ -100,7 +106,7 @@
                     <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4">其他信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">其他信息</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">成果应用</td>
@@ -116,26 +122,26 @@
                 </tr>
                 <tr>
                     <td style="width:120px">项目完成周期</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int" required="true"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目内容路径简介</td>
                     <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4">预算信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">预算信息</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">总预算 <font color="red">※</font></td>
-                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float"/></td>
+                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float" required="true"/></td>
                     <td style="width:120px">公司经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">外部支持经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
                     <td style="width:120px">国家经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
                 </tr>
 
             </table>
@@ -144,14 +150,14 @@
         <div title="项目其他信息">
             <table cellpadding="1" cellspacing="2" class="table1">
                 <tr>
-                    <td class="trTitle" colspan="2">技术第一负责人信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">技术第一负责人信息</div></td>
                 </tr>
                 <tr>
                     <td style="width: 100px">姓名、专业经历和能力简述</td>
                     <td><input style="width: 100%;" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="2">产品信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">产品信息</div></td>
                 </tr>
                 <tr>
                     <td>产品形式</td>
@@ -200,28 +206,28 @@
                     <td><input style="width: 100%; " class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="2">附件信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">附件信息</div></td>
                 </tr>
                 <tr>
                     <td>立项报告书 <font color="red">※</font></td>
                     <td id="upload">
                         <div>
-                            <input class="mini-htmlfile" name="Fdata" id="file1" style="width:93%;"/>
+                            <input class="mini-htmlfile" name="Fdata" id="file1" style="width:93%;" required="true" buttonText="Browse"/>
                             <input style="float: right" type="button" value="上传" onclick="ajaxFileUpload()"/>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="2">流程信息</td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">流程信息</div></td>
                 </tr>
                 <tr>
                     <td style="width: 100px">审批(部门经理) <font color="red">※</font></td>
                     <td>
                         <input id="btnEdit1" style="width: 100%"
-                               class="mini-buttonedit"
+                               class="mini-buttonedit user_add"
                                onbuttonclick="onDepartmentanager"
                                allowInput="false"
-                               name="sid" textName="sname"/>
+                               name="sid" textName="sname" required="true"/>
                     </td>
                 </tr>
                 <tr>
@@ -254,8 +260,8 @@
                     var data = iframe.contentWindow.GetData();
                     data = mini.clone(data);    //必须
                     if (data) {
-                        btnEdit.setValue(data.cid);
-                        btnEdit.setText(data.cname);
+                        btnEdit.setValue(data.aid);
+                        btnEdit.setText(data.aname);
                     }
                 }
 
@@ -277,8 +283,8 @@
                     var data = iframe.contentWindow.GetData();
                     data = mini.clone(data);    //必须
                     if (data) {
-                        btnEdit.setValue(data.sid);
-                        btnEdit.setText(data.sname);
+                        btnEdit.setValue(data.aid);
+                        btnEdit.setText(data.aname);
                     }
                 }
 

@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: dllo
-  Date: 18/2/6
-  Time: 上午8:56
+  Date: 18/2/7
+  Time: 下午7:55
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>工程师 组织审核</title>
+    <title>科技办经理审批</title>
     <link rel="stylesheet" href="/resources/css/demo.css">
 
     <script src="/resources/scripts/boot.js" type="text/javascript"></script>
@@ -24,36 +24,19 @@
         }
 
         td {
-            border-collapse: collapse;
-            padding: 5px;
-            height: 20px;
-            background-color: #c2e3ff;
-            border: 1px solid #37b9ff;
-        }
 
-        .trTitle {
-            background-color: #daeeff;
-            color: #427dc0;
+            border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
-        }
+            padding: 2px;
+            background-color: RGB(239, 248, 254);;
 
+            padding: 3px;
+            height: 25px;
+        }
     </style>
 </head>
-<etDa>
-<%--<form id="form">--%>
-<%--<div id="tabs1" style="width: 100%;height: 100%;border: 1px solid gainsboro" class="mini-tabs"--%>
-<%--activeIndex="0"--%>
-<%--plain="false">--%>
-<%--&lt;%&ndash;基本信息TAB&ndash;%&gt;--%>
-<%--<div title="项目基本信息" >--%>
-
-<%--<table cellpadding="1" cellspacing="2" class="table1">--%>
-<%--<tr>--%>
-<%--<td class="trTitle" colspan="4">项目基本信息</td>--%>
-<%--</tr>--%>
-
+<body>
 <div style="width: 100%">
-
     <div id="baseInformation" class="mini-panel" margin-top="0px" title="项目基本信息" iconCls="icon-downgrade"
          style="width:100%;height: 240px"
          showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true" collapseOnTitleClick="true">
@@ -63,7 +46,7 @@
             <tr>
                 <td style="width:120px">项目名称</td>
                 <td colspan="3" style="background-color: white">
-                    <a href="#" style="padding-left: 300px">阳江业务管理平台</a>
+                    <a href="#" style="padding-left: 300px">业务流程管理平台</a>
                 </td>
             </tr>
             <tr>
@@ -109,58 +92,72 @@
         </table>
     </div>
 
-    <div id="baseInformation2" class="mini-panel" margin-top="0px" title="审评信息"
+
+    <div id="baseInformation2" class="mini-panel" margin-top="0px" title="工程师评审意见"
          iconCls="icon-downgrade"
          style="width:100%;height: 180px"
          showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true"
          collapseOnTitleClick="true">
-
         <table style="width: 100%;height: 100%">
-            <%--<tr>--%>
-            <%--<td class="trTitle" colspan="4">审评信息</td>--%>
-            <%--</tr>--%>
             <tr>
                 <td style="width:120px">审评结果</td>
-                <td colspan="3"><input style="width: 100%;height: 90%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%;" type="text" class="mini-textarea" vtype="float"/>
                 </td>
             </tr>
             <tr>
                 <td>立项报告书 <font color="red">※</font></td>
                 <td id="upload">
-                    <div style="width: 100%; background-color: white">
-                        <input id="fileupload1" class="mini-htmlfile" name="Fdata" id="file1"
-                               style="width:100%;"/>
-                    </div>
+                    <a href="#">立项报告书</a>
+                    <%--<div style="width: 100%; background-color: white">--%>
+                    <%--<input id="fileupload1" class="mini-htmlfile" name="Fdata" id="file1"--%>
+                    <%--style="width:93%;"/>--%>
+                    <%--</div>--%>
                 </td>
             </tr>
-
         </table>
     </div>
 
 
-    <div id="baseInformation3" class="mini-panel" margin-top="0px" title="流程信息"
+    <div id="baseInformation3" class="mini-panel" margin-top="0px" title="计划可行性分析意见"
          iconCls="icon-downgrade"
-         style="width:100%;height: 80px"
+         style="width:100%;height: 360px"
          showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true"
          collapseOnTitleClick="true">
-
         <table style="width: 100%;height: 100%">
-
-
-            <%--<tr>--%>
-            <%--<td class="trTitle" colspan="4">流程信息</td>--%>
-            <%--</tr>--%>
             <tr>
-                <td style="width:120px">审批组长</td>
-                <td>
-                    <input style="width: 100%"
-                           class="mini-buttonedit"
-                           allowInput="false"
-                           onbuttonclick="onPeopleButtonEdit"
-                           name="sid" textName="sname"/>
+                <td style="width:120px">对阳江公司科技发展规划的符合性审定</td>
+                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
                 </td>
             </tr>
+            <tr>
+                <td style="width:120px">对项目成果的影院领域和价值</td>
+                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120px">总体评价</td>
+                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                </td>
+            </tr>
+        </table>
+    </div>
 
+    <div id="baseInformation4" class="mini-panel" margin-top="0px" title="操作信息"
+         iconCls="icon-downgrade"
+         style="width:100%;height: 200px"
+         showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true"
+         collapseOnTitleClick="true">
+        <table style="width: 100%;height: 100%">
+            <tr>
+                <td style="width:120px">要求</td>
+                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120px">建议</td>
+                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                </td>
+            </tr>
         </table>
     </div>
 
@@ -168,61 +165,12 @@
         <tr>
             <td colspan="4" style="background-color: #e0e0e0">
                 <a style="float: right; margin-right: 50px" onclick="agree()" class="mini-button"
-                   iconCls="icon-ok">提交</a>
+                   iconCls="icon-ok">推荐</a>
                 <a style="float: right; margin-right: 50px" onclick="disagree()" class="mini-button"
-                   iconCls="icon-no">驳回</a>
-                <%--<input style="float: right; margin-right: 50px" type="button" value="提交">--%>
-                <%--<input style="float: right; margin-right: 35px" type="button" value="驳回">--%>
+                   iconCls="icon-no">不推荐</a>
             </td>
         </tr>
-
     </table>
-    <%--</div>--%>
 </div>
-<%--</form>--%>
-
 </body>
-<script>
-
-    mini.parse();
-
-    function agree() {
-        alert("通过")
-    }
-
-    function disagree() {
-        alert("不通过")
-    }
-
-    function startUpload() {
-        var fileupload = mini.get("fileupload1");
-
-        fileupload.startUpload();
-    }
-
-
-    function onPeopleButtonEdit(e) {
-        //加载mini组件 后面的get方法才好用
-        var btnEdit = this;
-        mini.open({
-            url: "selectPeople",
-            title: "选择学生",
-            width: 650,
-            height: 380,
-            ondestroy: function (action) {
-                //if (action == "close") return false;
-                if (action == "ok") {
-                    var iframe = this.getIFrameEl();
-                    var data = iframe.contentWindow.GetData();
-                    data = mini.clone(data);    //必须
-                    if (data) {
-                        btnEdit.setValue(data.sid);
-                        btnEdit.setText(data.sname);
-                    }
-                }
-
-            }
-        })
-    }
-</script>
 </html>

@@ -12,10 +12,10 @@
     <title>联合申报单位</title>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <link href="../../../resources/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/demo.css" rel="stylesheet" type="text/css" />
 
 
-    <script src="../../../resources/scripts/boot.js" type="text/javascript"></script>
+    <script src="/resources/scripts/boot.js" type="text/javascript"></script>
 
 
     <style type="text/css">
@@ -40,8 +40,8 @@
     >
         <div property="columns">
             <div type="indexcolumn" ></div>
-            <div field="" width="120" headerAlign="center" allowSort="true">联合申报单位ID</div>
-            <div field="" width="100%" headerAlign="center" allowSort="true">联合申报单位名称</div>
+            <div field="aid" width="120" headerAlign="center" allowSort="true">联合申报单位ID</div>
+            <div field="aname" width="100%" headerAlign="center" allowSort="true">联合申报单位名称</div>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
     var grid = mini.get("grid1");
 
     //动态设置URL
-    grid.setUrl("");
+    grid.setUrl("/researchRA/selectApplicationUnit");
     //也可以动态设置列 grid.setColumns([]);
 
     grid.load();
@@ -70,7 +70,7 @@
     }
     function search() {
         var key = mini.get("key").getValue();
-        grid.load({ sname: key });
+        grid.load({ aname: key });
     }
     function onKeyEnter(e) {
         search();

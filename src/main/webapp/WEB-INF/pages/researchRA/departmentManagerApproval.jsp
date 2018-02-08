@@ -37,7 +37,7 @@
         }
 
         .trTitle {
-            background-color: #daeeff;
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0 ;
             color: #427dc0;
         }
 

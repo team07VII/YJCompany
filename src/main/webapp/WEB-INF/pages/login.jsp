@@ -28,16 +28,16 @@
             left: 480px;
         }
 
-        input {
-            width: 300px;
-            height: 30px;
-            padding-left: 0;
-            color: #1c1c1c;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 30px;
-        }
+        /*input {*/
+            /*width: 300px;*/
+            /*height: 30px;*/
+            /*padding-left: 0;*/
+            /*color: #1c1c1c;*/
+            /*border: none;*/
+            /*font-size: 16px;*/
+            /*font-weight: bold;*/
+            /*line-height: 30px;*/
+        /*}*/
         .inp {
             border: 1px solid #cccccc;
             border-radius: 2px;
