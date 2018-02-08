@@ -152,9 +152,6 @@
         listbox2.addItems(items);
         listbox2.readOnly=false;
 
-
-
-
     }
 
     function onCombineUnit(e) {

@@ -1,5 +1,4 @@
 package com.yanjiang.yjStaff.domain;
-
 import java.io.Serializable;
 
 /**

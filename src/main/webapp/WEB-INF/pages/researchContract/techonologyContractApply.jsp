@@ -97,7 +97,7 @@
             <td class="td1" iconCls="icon-collapse">总费用</td>
             <td class="td2">
                 <%--必填项、数字（保留2位小数,单位万元)--%>
-                <input required="true" vtype=“float" class="mini-textbox" width="100%" name=""/>
+                <input required="true" vtype=“float" class="mini-textbox" width="100%" name="totalBudget"/>
             </td>
             <td class="td1">对方拨付</td>
             <td class="td2">
@@ -147,13 +147,13 @@
         <tr>
             <td class="td1">合同运作形式简介</td>
             <td colspan="3">
-                <input class="mini-textarea" width="100%" name=""/>
+                <input class="mini-textarea" width="100%" name="contractRunDesc"/>
             </td>
         </tr>
         <tr>
             <td class="td1">运作说明</td>
             <td class="righttd" id="upload">
-                <input class="mini-htmlfile" name="contractRunDesc" buttonText="Browse"
+                <input class="mini-htmlfile" name="achievementDesc" buttonText="Browse"
                        id="file1" style="width:100%;"/>
                 <%--两个隐藏组件包含两个表单中的数据--%>
                 <input id="base" type="hidden" name="base">
@@ -192,7 +192,7 @@
             <%--人员卫星库选人控件，可多选--%>
             <td class="td1">技术部经理</td>
             <td class="td2">
-                <input class="mini-textbox" width="100%" name="CONTRACT_SIGNTORY">
+                <input class="mini-textbox" width="100%" name="">
             <td><a class="mini-button" iconCls="icon-user"></a></td>
             </td>
 
