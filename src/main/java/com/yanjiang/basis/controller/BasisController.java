@@ -1,11 +1,16 @@
 package com.yanjiang.basis.controller;
 
+import com.yanjiang.basis.utils.BaseResult;
 import com.yanjiang.basis.utils.GEETEST.GeetestConfig;
 import com.yanjiang.basis.utils.GEETEST.GeetestLib;
+import com.yanjiang.yjStaff.domain.YjStaff;
+import com.yanjiang.yjStaff.service.YjStaffService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -17,6 +22,9 @@ import java.util.HashMap;
  */
 @Controller
 public class BasisController {
+
+    @Resource
+    private YjStaffService yjStaffService;
 
     //    初始页默认为主页
     @RequestMapping("/")
@@ -61,19 +69,48 @@ public class BasisController {
 //    }
 
     //    查询申请人
+    @ResponseBody
+    @RequestMapping("/findPeople")
+    public BaseResult<YjStaff> findPeople(int pageIndex,int pageSize,YjStaff yjStaff) {
+
+        BaseResult<YjStaff> result = null;
+
+        try{
+
+            result = yjStaffService.pageSelect(pageIndex, pageSize, yjStaff);
+
+        }catch (Exception e){
+
+            return null;
+
+        }
+
+        return result;
+    }
+
     @RequestMapping("/selectPeople")
-    public String selectPeople() {
-
-        System.out.println("selectPeople");
-
+    public String selectPeople(){
         return "page/SelectPeople";
     }
+
+//    @ResponseBody
+//    @RequestMapping("/selectPeople")
+//    public BaseResult<YjStaff> selectPeople() {
+//
+//        List<YjStaff> applicationUnits = yjStaffService.selectAll();
+//        /*将查询到的记过进行封装*/
+//        BaseResult<YjStaff> result = new BaseResult<>();
+//        result.setTotal(100);//设置总记录数
+//        result.setData(applicationUnits);//设置当前显示数据
+//
+//        return result;
+//    }
 
     //    退出登录
     @RequestMapping("/exit")
     public String exit(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().removeAttribute("username");
-        System.out.println("退出登录");
+//        System.out.println("退出登录");
         return "login";
     }
 

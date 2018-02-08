@@ -21,7 +21,6 @@
             width: 100%;
             margin: 1px;
             border: 1px solid gainsboro;
-            /*border-collapse: collapse;*/
         }
         td {
             border: 1px solid RGB(214, 230, 217);
@@ -36,14 +35,6 @@
             font-family: "Heiti SC";
             padding: 3px;
         }
-
-        /*table {*/
-            /*width: 100%;*/
-            /*height: auto;*/
-            /*!*border: 0px solid #ffffff;*!*/
-            /*border-collapse: collapse;*/
-            /*padding: 0px;*/
-        /*}*/
 
     </style>
 </head>
@@ -83,7 +74,7 @@
                                                class="mini-buttonedit"
                                                allowInput="false"
                                                onbuttonclick="onPeopleButtonEdit"
-                                               name="sid" textName="sname"/>
+                                               name="staffId" textName="staffName"/>
                                     </td>
                                     <td style="width: 20%"></td>
                                     <td style="width:80px">关键字</td>
@@ -178,6 +169,54 @@
                                     <td>
                                         <input style="width: 100%"/>
                                     </td>
+                    <div id="layout2" class="mini-layout" style="width:100%; height: 150px;" borderStyle="border:solid 1px #aaa;">
+                        <div title="查询条件" style="background-color: #daeeff" region="north" height="150" showSplitIcon="true" >
+                                <table>
+                                    <tr>
+                                        <td style="width:80px">申请时间</td>
+                                        <td>
+                                            <%--<input id="date2" style="width: 200%" class="mini-datepicker"/>--%>
+                                                <input property="editor" class="mini-datepicker" style="width:200%;"/>
+                                        </td>
+                                        <td style="width: 30%"></td>
+                                        <td style="width:80px">流程名称</td>
+                                        <td>
+                                            <input style="width:200%;"class="mini-buttonedit"
+                                                   allowInput="false"
+                                                   onbuttonclick="onStudentButtonEdit"
+                                                   name="sid" textName="sname"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:80px">申请人</td>
+                                        <td>
+
+                                            <%--<div id="datagrid1" class="mini-datagrid"--%>
+                                                 <%--url="/selectPeople"--%>
+                                                 <%--style="width: 100%;height: 60%"--%>
+                                                 <%--sizeList = "[2,5,10]"--%>
+                                                 <%--pageSize="5">--%>
+
+
+
+                                                <%--<div property="columns">--%>
+                                                    <%--<div field="staffId" width="120" headerAlign="center" allowSort="true">申报单位ID</div>--%>
+                                                    <%--<div field="staffName" width="120" headerAlign="center" allowSort="true">申报单位名称</div>--%>
+
+                                                <%--</div>--%>
+                                            <%--</div>--%>
+
+                                            <input style="width: 200%"
+                                                   class="mini-buttonedit"
+                                                   allowInput="false"
+                                                   onbuttonclick="onPeopleButtonEdit"
+                                                   name="staffId" textName="staffName"/>
+                                        </td>
+                                        <td style="width: 30%"></td>
+                                        <td style="width:80px">关键字</td>
+                                        <td>
+                                            <input style="width: 200%"/>
+                                        </td>
 
                                 </tr>
                                 <tr>
@@ -283,8 +322,8 @@
                     var data = iframe.contentWindow.GetData();
                     data = mini.clone(data);    //必须
                     if (data) {
-                        btnEdit.setValue(data.sid);
-                        btnEdit.setText(data.sname);
+                        btnEdit.setValue(data.staffId);
+                        btnEdit.setText(data.staffName);
                     }
                 }
 

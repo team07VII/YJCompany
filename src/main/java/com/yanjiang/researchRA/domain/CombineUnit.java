@@ -1,9 +1,11 @@
 package com.yanjiang.researchRA.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by dllo on 18/2/6.
  */
-public class CombineUnit {
+public class CombineUnit implements Serializable {
     private int cid;
     private String cname;
 

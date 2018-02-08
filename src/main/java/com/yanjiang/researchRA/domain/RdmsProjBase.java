@@ -1,11 +1,12 @@
 package com.yanjiang.researchRA.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by dllo on 18/2/5.
  */
-public class RdmsProjBase {
+public class RdmsProjBase implements Serializable {
 
 //    业务主键
     private String projId;

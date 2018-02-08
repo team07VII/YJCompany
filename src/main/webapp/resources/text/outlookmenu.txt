@@ -14,9 +14,9 @@
     { id: "engineerApproval", pid: "science", text: "工程师组织审核", url: "researchRA/engineerApproval" },
     { id: "teamLeaderApproval", pid: "science", text: "评审小组组长填写评审意见", url: "researchRA/teamLeaderApproval" },
     { id: "projectApplyBasic", pid: "science", text: "科研项目申报", url: "researchRA/projectApplyBasic" },
-    { id: "departmentManagerApproval", pid: "science", text: "部门经理审批", url: "researchRA/departmentManagerApproval" }
+    { id: "departmentManagerApproval", pid: "science", text: "部门经理审批", url: "researchRA/departmentManagerApproval" },
     { id: "technologyManagerApproval", pid: "science", text: "科技办经理审批", url: "researchRA/technologyManagerApproval" },
-    { id: "financialApproval", pid: "science", text: "财务部审批", url: "researchRA/financialApproval" }
+    { id: "financialApproval", pid: "science", text: "财务部审批", url: "researchRA/financialApproval" },
     { id: "managerApproval", pid: "science", text: "总经理审批", url: "researchContract/managerApproval" }
 
 ]

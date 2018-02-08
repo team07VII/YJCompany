@@ -19,16 +19,29 @@
         table {
             width: 100%;
             margin: 1px;
-            border: 1px solid #b6e5ff;
-            border-collapse: collapse;
+            border: 1px solid gainsboro;
         }
 
         td {
+
+            border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
-            padding: 5px;
+            padding: 2px;
+            background-color: RGB(239, 248, 254);;
+
+            padding: 3px;
+            height: 25px;
+        }
+
+        .trTitle {
+            background-color: #daeeff;
+            color: #427dc0;
+        }
+
+        input {
             height: 20px;
-            background-color: #c2e3ff;
-            border: 1px solid #37b9ff;
+            text-align: center;
+            vertical-align: text-bottom;
         }
     </style>
 </head>
@@ -98,7 +111,7 @@
         <table style="width: 100%;height: 100%">
             <tr>
                 <td style="width:120px">审评结果</td>
-                <td colspan="3"><input style="width: 100%;height: 80%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%;height: 80%" type="text" class="mini-textarea"/>
                 </td>
             </tr>
             <tr>
@@ -123,17 +136,17 @@
         <table style="width: 100%;height: 100%">
             <tr>
                 <td style="width:120px">对阳江公司科技发展规划的符合性审定</td>
-                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%; height: 80px" type="text" class="mini-textarea"/>
                 </td>
             </tr>
             <tr>
                 <td style="width:120px">对项目成果的影院领域和价值</td>
-                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%; height: 80px" type="text" class="mini-textarea"/>
                 </td>
             </tr>
             <tr>
                 <td style="width:120px">总体评价</td>
-                <td colspan="3"><input style="width: 100%" type="text" class="mini-textarea" vtype="float"/>
+                <td colspan="3"><input style="width: 100%; height: 80px" type="text" class="mini-textarea"/>
                 </td>
             </tr>
         </table>

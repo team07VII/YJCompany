@@ -17,6 +17,9 @@
     <script src="/resources/js/jquery-3.2.1.js"></script>
     <script src="/resources/js/gt.js"></script>
     <style>
+        /*body{*/
+            /*position: absolute;*/
+        /*}*/
         #div1 {
 
             color: #ffffff;
@@ -46,19 +49,19 @@
             height: 40px;
             font-size: 18px;
         }
-        .btn {
-            border: 1px solid #cccccc;
-            border-radius: 2px;
-            width: 100px;
-            height: 40px;
-            font-size: 16px;
-            color: #666;
-            cursor: pointer;
-            background: white linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
-        }
-        .btn:hover {
-            background: white linear-gradient(0deg, #ffffff 0%, #f3f3f3 100%)
-        }
+        /*.btn {*/
+            /*border: 1px solid #cccccc;*/
+            /*border-radius: 2px;*/
+            /*width: 100px;*/
+            /*height: 40px;*/
+            /*font-size: 16px;*/
+            /*color: #666;*/
+            /*cursor: pointer;*/
+            /*background: white linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);*/
+        /*}*/
+        /*.btn:hover {*/
+            /*background: white linear-gradient(0deg, #ffffff 0%, #f3f3f3 100%)*/
+        /*}*/
         #captcha1,
         #captcha2 {
             width: 300px;
@@ -110,7 +113,7 @@
     <div class="avtar">
         <img src="/resources/images/avtar.png" />
     </div>
-    <form action="/home">
+    <form action="/home" method="post">
         <input type="text" class="text" name="username" id="username">
         <div class="key">
             <input type="password" name="password" id="password">

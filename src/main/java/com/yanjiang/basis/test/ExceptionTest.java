@@ -1,7 +1,7 @@
 package com.yanjiang.basis.test;
 
-import com.yanjiang.basis.utils.impl.exception.AllException;
-import com.yanjiang.basis.utils.impl.mail.SendEmail;
+import com.yanjiang.basis.utils.exception.AllException;
+import com.yanjiang.basis.utils.mail.SendEmail;
 import org.junit.Test;
 
 /**

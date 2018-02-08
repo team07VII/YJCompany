@@ -90,16 +90,4 @@ public class ResearchRAController {
         return "researchRA/departmentManagerApproval";
     }
 
-//    @RequestMapping("insert")
-//    public ModelAndView insert(RdmsProjBase rdmsProjBase){
-//        System.out.println(rdmsProjBase);
-//        ModelAndView mv = new ModelAndView();
-//       mv.setViewName("researchRA/success");
-//        mv.addObject("data",rdmsProjBase);
-//        projBaseService.insert(rdmsProjBase);
-//        return mv;
-//
-//
-//    }
-
 }

@@ -1,7 +1,7 @@
 package com.yanjiang.researchRA.mapper;
 
+import com.yanjiang.basis.utils.PageBean;
 import com.yanjiang.researchRA.domain.ApplicationUnit;
-import com.yanjiang.researchRA.page.PageBean;
 
 import java.util.List;
 
@@ -11,7 +11,10 @@ import java.util.List;
 public interface ApplicationUnitMapper {
 
     List<ApplicationUnit> selectAll();
-    List<ApplicationUnit> selectApplicationUnit(PageBean<ApplicationUnit> pageBean);
+
+    List<ApplicationUnit> selectPageBean(PageBean<ApplicationUnit> pageBean);
 
     Integer getTotalRecord(PageBean<ApplicationUnit> pageBean);
+
+
 }

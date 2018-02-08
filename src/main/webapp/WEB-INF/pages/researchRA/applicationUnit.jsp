@@ -6,10 +6,7 @@
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link href="/resources/css/demo.css" rel="stylesheet" type="text/css" />
-
-
     <script src="/resources/scripts/boot.js" type="text/javascript"></script>
-
 
     <style type="text/css">
         body{

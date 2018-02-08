@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanjiang.yjStaff.mapper.YjStaffMapper">
+
+    <sql id="userColumns">
+        s.staff_id,s.staff_username,s.staff_pwd
+    </sql>
+
+    <sql id="usernameSql">
+        <where>
+            1 = 1
+            <if test="staffUsername != null and staffUsername != '' ">
+                AND s.staff_username = #{staffUsername}
+            </if>
+            <if test="staffPwd != null and staffPwd != '' ">
+                AND s.staff_pwd = #{staffPwd}
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectByUserName" parameterType="String"
+            resultType="com.yanjiang.yjStaff.domain.YjStaff">
+        select
+        <include refid="userColumns"/>
+        from yj_staff s
+        where s.staff_username=#{staffUsername} AND s.staff_pwd=#{staffPwd}
+    </select>
+
+    <!--分页查询
+  在mapper文件中用#{属性名}的是取传递过来的参数值,如果传递过来的参数是一个基本类型则可以用#{value}获取
+  如果是pojo,则通过#{属性名}获取某个值-->
+    <select id="selectPageBean"
+            resultType="com.yanjiang.yjStaff.domain.YjStaff"
+            parameterType="com.yanjiang.basis.utils.PageBean">
+        SELECT
+        staff_id, staff_name
+        FROM `yj_staff` WHERE staff_name LIKE '%${parameter.staffName}%'
+        LIMIT #{startIndex},#{pageSize};
+    </select>
+
+    <!--获取学生表总条数-->
+    <select id="getTotalRecord"
+            resultType="java.lang.Integer"
+            parameterType="com.yanjiang.basis.utils.PageBean">
+        SELECT COUNT(staff_id) FROM `yj_staff` WHERE staff_name LIKE '%${parameter.staffName}%'
+    </select>
+
+
+    <select id="selectAll" resultType="com.yanjiang.yjStaff.domain.YjStaff">
+        SELECT
+        <include refid="userColumns"/>
+        FROM `yj_staff`
+    </select>
+
+</mapper>
