@@ -77,7 +77,7 @@
     </sql>
 
 
-    <insert id="insert">
+    <insert id="insert" parameterType="com.yanjiang.researchRA.domain.RdmsProjBase">
         INSERT INTO `PMS.RDMS_PROJ_BASE`
         (<include refid="Base_Column_List"/> )
         VALUES
