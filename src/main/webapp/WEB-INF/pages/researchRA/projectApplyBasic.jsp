@@ -56,7 +56,7 @@
 </head>
 <body>
 
-<form id="form">
+<form id="form" action="/researchRA/insert">
     <div id="tabs1" style="width: 100%;height: 100%;border: 1px solid gainsboro" class="mini-tabs"
          activeIndex="0"
          plain="false">
@@ -88,16 +88,16 @@
                 </tr>
                 <tr>
                     <td style="width:120px">目的 <font color="red">※</font></td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td colspan="3"><input name="purpose" style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
                     <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">与核电生产运营安全性,可靠性,经济的适应分析</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">安全性</td>
-                    <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td><input name="safeDesc" style="width: 100%" class="mini-textarea" required="true"/></td>
                     <td style="width:120px">可靠性</td>
-                    <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td><input name="reliableDesc" style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">经济性</td>
