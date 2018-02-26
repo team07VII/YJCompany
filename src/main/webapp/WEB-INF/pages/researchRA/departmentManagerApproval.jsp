@@ -25,6 +25,11 @@
             border: 1px solid gainsboro;
         }
 
+        .header {
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0 ;
+            font-family: "Heiti SC";
+            padding: 5px;
+        }
         td {
 
             border: 1px solid RGB(214, 230, 217);
@@ -58,7 +63,7 @@
         <div title="项目基本信息" >
             <table cellpadding="1" cellspacing="2" class="table1">
                 <tr>
-                    <td class="trTitle" colspan="4">项目名称</td>
+                    <td class="header" colspan="4" style="color:rgb(38,64,140)";><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div>项目名称</td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目名称 </td>
@@ -83,7 +88,7 @@
                     <td colspan="3"><input style="width: 100%" class="mini-textarea" /></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="width:100px">与核电生产运营安全性、可靠性、经济的适应分析</td>
+                    <td class="header" colspan="4" style="color:rgb(38,64,140)";><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div>与核电生产运营安全性、可靠性、经济的适应分析</td>
                 </tr>
                 <tr>
                     <td style="width:120px">安全性</td>
@@ -98,7 +103,7 @@
                     <td><input style="width: 100%" class="mini-textarea" /></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4">审批意见</td>
+                    <td class="header" colspan="4" style="color:rgb(38,64,140)";><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade"></div>审批意见</td>
                 </tr>
                 <tr>
                     <td style="width:120px">审批意见</td>
