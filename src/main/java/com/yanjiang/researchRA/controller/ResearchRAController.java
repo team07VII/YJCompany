@@ -1,11 +1,11 @@
 package com.yanjiang.researchRA.controller;
 
+import com.yanjiang.basis.utils.exception.CommonUtils;
 import com.yanjiang.researchRA.domain.RdmsProjBase;
 import com.yanjiang.researchRA.service.RdmsProjBaseService;
 import com.yanjiang.researchRA.service.RdmsProjBudgetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 
@@ -92,9 +92,16 @@ public class ResearchRAController {
 
     @RequestMapping("/insert")
     public String insert(RdmsProjBase rdmsProjBase){
-        System.out.println(rdmsProjBase);
+
+
+        rdmsProjBase.setProjId(CommonUtils.uuid());
+
+//        System.out.println(rdmsProjBase);
 
         projBaseService.insert(rdmsProjBase);
+
+        System.out.println(rdmsProjBase);
+
         return "researchRA/projectApplyBasic";
 
 

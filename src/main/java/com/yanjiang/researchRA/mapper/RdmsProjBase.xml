@@ -81,8 +81,8 @@
         INSERT INTO `PMS.RDMS_PROJ_BASE`
         (<include refid="Base_Column_List"/> )
         VALUES
-        (#{PROJ_ID},
-        #{PROJ_NAME},
+        (#{projId},
+        #{projName},
         #{PROJ_TYPE},
         #{APP_ORG_NO},
         #{APP_ORG_NAME},

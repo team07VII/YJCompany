@@ -191,6 +191,7 @@ public class BasisController {
         return "";
     }
 
+//    后台登录
     @RequestMapping("hikibi")
     public String hikibi(){
 
@@ -198,5 +199,17 @@ public class BasisController {
 
         return "main";
     }
+
+//    @ResponseBody
+//    @RequestMapping("someJson")
+//    public String a(){
+//
+//        String a = "[" +
+//                "{ id: 'front', text: '首页',}," +
+//                "{ id: 'frontPage', pid: 'front', text: '公司简介', url: 'page/RightBody_Welcome' }]";
+//
+//        return a;
+//    }
+
 
 }
