@@ -101,28 +101,28 @@
                 </tr>
                 <tr>
                     <td style="width:120px">经济性</td>
-                    <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" required="true" name="econDesc"/></td>
                     <td style="width:120px">其他</td>
-                    <td><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" required="true" name="otherDesc"/></td>
                 </tr>
                 <tr>
                     <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">其他信息</div></td>
                 </tr>
                 <tr>
                     <td style="width:120px">成果应用</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="achievementDesc"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">实际用户</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="realUser"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">潜在用户</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="potentialUser"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目完成周期</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int" required="true"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int" required="true" name="a"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目内容路径简介</td>
@@ -133,7 +133,7 @@
                 </tr>
                 <tr>
                     <td style="width:120px">总预算 <font color="red">※</font></td>
-                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float" required="true"/></td>
+                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float" required="true" name="b"/></td>
                     <td style="width:120px">公司经费</td>
                     <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
                 </tr>
@@ -191,19 +191,19 @@
                 </tr>
                 <tr>
                     <td>预计产权说明</td>
-                    <td><input style="width: 100%; " class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%; " class="mini-textarea" required="true" name="rightDesc"/></td>
                 </tr>
                 <tr>
                     <td>经济效益</td>
-                    <td><input style="width: 100%; " class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%; " class="mini-textarea" required="true" name="benefitsDesc"/></td>
                 </tr>
                 <tr>
                     <td>固定资产</td>
-                    <td><input style="width: 100%; " class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%; " class="mini-textarea" required="true" name="fixedAssets"/></td>
                 </tr>
                 <tr>
                     <td>验收标准</td>
-                    <td><input style="width: 100%; " class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%; " class="mini-textarea" required="true" name="acceptStand"/></td>
                 </tr>
                 <tr>
                     <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">附件信息</div></td>
@@ -213,7 +213,7 @@
                     <td id="upload">
                         <div>
                             <input class="mini-htmlfile" name="Fdata" id="file1" style="width:93%;" required="true" buttonText="Browse"/>
-                            <input style="float: right" type="button" value="上传" onclick="ajaxFileUpload()"/>
+                            <%--<input style="float: right" type="button" value="上传" onclick="ajaxFileUpload()"/>--%>
                         </div>
                     </td>
                 </tr>

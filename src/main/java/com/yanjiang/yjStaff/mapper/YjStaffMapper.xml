@@ -54,4 +54,13 @@
         FROM `yj_staff`
     </select>
 
+    <!-- 获取权限 -->
+    <select id="getRoles" parameterType="String" resultType="String">
+        select d.dep_name
+        from `yj_staff` s,`yj_department` d
+        where s.staff_dep_id=d.dep_id
+        and s.staff_username=#{userName}
+    </select>
+
+
 </mapper>

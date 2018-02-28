@@ -48,8 +48,9 @@
     <div title="center" region="center">
         <div class="mini-splitter" style="width:99%;height:100%">
             <%--左侧menu--%>
+            <%-- /resources/text/outlookmenu.txt --%>
             <div size="15%" showCollapseButton="true">
-                <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt"
+                <div id="leftTree" class="mini-outlookmenu" url="/someJson"
                      onitemselect="onItemSelect"
                      idField="id" parentField="pid" textField="text" borderStyle="border:0">
                 </div>

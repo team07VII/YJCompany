@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by dllo on 18/2/7.
@@ -54,6 +55,11 @@ public class YjStaffServiceImpl implements YjStaffService {
     @Override
     public List<YjStaff> selectAll() {
         return yjStaffMapper.selectAll();
+    }
+
+    @Override
+    public Set<String> getRoles(String userName) {
+        return yjStaffMapper.getRoles(userName);
     }
 
 }
