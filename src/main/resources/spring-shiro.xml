@@ -52,7 +52,7 @@
 
                  <!--定义角色检查的路径 -->
                 <!--/user/home=roles[部门经理]-->
-                <!--&lt;!&ndash; 定义需要认证的路径 &ndash;&gt;-->
+                 <!--定义需要认证的路径 -->
                 <!--/*=authc-->
                 /researchRA/*=authc
                 <!--/teacher=perms["user:create"]-->

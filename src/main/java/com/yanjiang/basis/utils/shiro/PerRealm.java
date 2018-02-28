@@ -10,6 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import javax.annotation.Resource;
+import java.util.Set;
 
 /**
  * Created by dllo on 17/12/1.
@@ -38,8 +39,11 @@ public class PerRealm extends AuthorizingRealm {
 //        1. 认证的结果: 取出的User实体类/用户名
         String username = (String) principalCollection.getPrimaryPrincipal();
 
+//        System.out.println(username);
+
 //        2. 根据用户名查询角色列表
-//        Set<String> roles = userService.getRoles(username);
+        Set<String> roles = yjStaffService.getRoles(username);
+
 
 //        3. 根据用户名查询权限列表
 //        Set<String> permissions = userService.getPermissions(username);
@@ -58,9 +62,10 @@ public class PerRealm extends AuthorizingRealm {
 //        4. 将获取的角色和权限都统一起来
 
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-//        info.setRoles(roles);
+        info.setRoles(roles);
 //        info.setStringPermissions(permissions);
 
+//        throw new UnknownAccountException("用户名或密码错误");
 
         return info;
     }
