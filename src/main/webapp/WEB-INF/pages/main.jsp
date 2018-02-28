@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>首页</title>
     <link rel="stylesheet" href="/resources/css/demo.css">
 
     <script src="/resources/scripts/boot.js" type="text/javascript"></script>
@@ -28,34 +28,49 @@
         input {
             height: 20px;
         }
+        #topbk{
+            background: url(/resources/images/top.png) repeat-x 0 ;
+            background-size: 100%;
+            width: 100%;
+            height: 10%;
+            float: left;
+        }
     </style>
 </head>
 <body>
 <%--http://music.163.com/#/song?id=849739--%>
-<div id="layout1" class="mini-layout" style="width:100%;height:100%" borderStyle="border:solid 1px #aaa;">
-    <div title="采购监管平台系统" region="north" showSplitIcon="true"
-         style="background-color: #e8ecf6;float: left;width: 100%;height: 15px">
+<div id="topbk">
+    <%--<span style="float: left"><h3>当前用户: ${username}</h3></span>--%>
+    <button style="float: right" onclick="exit()">退出登录</button>
+    <button style="float: right">个人工作台</button>
+</div>
+<div  id="layout1" class="mini-layout" style="width:100%;height:90%;background-color:RGB(41,105,166);" borderStyle="border:solid 1px #aaa;">
+    <%--<div  region="north"--%>
+         <%--style="background-color: #e8ecf6;float: left;width: 100%;height: 15px">--%>
+         <%--&lt;%&ndash;&ndash;%&gt;--%>
+        <%--&lt;%&ndash; 背景音乐 &ndash;%&gt;--%>
+        <%--&lt;%&ndash;<embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">&ndash;%&gt;--%>
 
-        <%-- 背景音乐 --%>
-        <%--<embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">--%>
+                <%--<span style="float: left"><h3>当前用户: ${username}</h3></span>--%>
+                <%--<button style="float: right" onclick="exit()">退出登录</button>--%>
+                <%--<button style="float: right">个人工作台</button>--%>
 
-                <span style="float: left"><h3>当前用户: ${username}</h3></span>
-                <button style="float: right" onclick="exit()">退出登录</button>
-                <button style="float: right">个人工作台</button>
+                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--</div>--%>
+        <%--<div style="background-image:url(/resources/images/top.png)">--%>
 
-                <%--</div>--%>
-    </div>
+        <%--</div>--%>
     <div title="center" region="center">
         <div class="mini-splitter" style="width:99%;height:100%">
             <%--左侧menu--%>
-            <div size="15%" showCollapseButton="true">
+            <div style="background-color:rgb(229,225,230)" size="15%" showCollapseButton="true">
                 <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt"
                      onitemselect="onItemSelect"
                      idField="id" parentField="pid" textField="text" borderStyle="border:0">
                 </div>
             </div>
             <%--右侧主题--%>
-            <div showCollapseButton="true" title="center" region="center" bodyStyle="overflow:scroll;">
+            <div style="background-color: whitesmoke" showCollapseButton="true" title="center" region="center" bodyStyle="overflow:scroll;">
                 <iframe id="mainframe" frameborder="0" name="main" style="width:100%;height:100%;" border="0"></iframe>
             </div>
         </div>
