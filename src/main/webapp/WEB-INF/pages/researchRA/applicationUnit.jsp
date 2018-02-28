@@ -2,7 +2,7 @@
 <%@ page isELIgnored="false" %>
 <html>
 <head>
-    <title>联合申报单位</title>
+    <title>项目申报单位</title>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link href="/resources/css/demo.css" rel="stylesheet" type="text/css" />

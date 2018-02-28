@@ -48,25 +48,25 @@ public class RdmsProjBase implements Serializable {
     private String primeStaffNo;
 //    项目负责人描述
     private String primeUserDesc;
-//
+//    预计产权说明
     private String rightDesc;
-//
+//    经济效益
     private String benefitsDesc;
-//
+//    固定资产
     private String fixedAssets;
-//
+//    验收标准
     private String acceptStand;
-//
+//    工程师审批结果
     private String engineerEvaluate;
-//
+//    符合性审定
     private String accordEvaluate;
-//
+//    项目应用领域评价
     private String applicationEvaluate;
-//
+//    总体评价
     private String totalEvaluate;
-//
+//    要求
     private String pmsRequire;
-//
+//    建议
     private String advice;
 //    是否有效 参见码表
     private String effectFlag;
@@ -76,6 +76,46 @@ public class RdmsProjBase implements Serializable {
     private String createStaffName;
 //    创建时间
     private Date createDate;
+
+    @Override
+    public String toString() {
+        return "RdmsProjBase{" +
+                "projId='" + projId + '\'' +
+                ", projName='" + projName + '\'' +
+                ", projType='" + projType + '\'' +
+                ", appOrgNo='" + appOrgNo + '\'' +
+                ", appOrgOame='" + appOrgOame + '\'' +
+                ", uniteAppOrgNo='" + uniteAppOrgNo + '\'' +
+                ", uniteAppOrgName='" + uniteAppOrgName + '\'' +
+                ", cycle=" + cycle +
+                ", totalBudget=" + totalBudget +
+                ", purpose='" + purpose + '\'' +
+                ", safeDesc='" + safeDesc + '\'' +
+                ", reliableDesc='" + reliableDesc + '\'' +
+                ", econDesc='" + econDesc + '\'' +
+                ", otherDesc='" + otherDesc + '\'' +
+                ", achievementDesc='" + achievementDesc + '\'' +
+                ", realUser='" + realUser + '\'' +
+                ", potentialUser='" + potentialUser + '\'' +
+                ", content='" + content + '\'' +
+                ", primeStaffNo='" + primeStaffNo + '\'' +
+                ", primeUserDesc='" + primeUserDesc + '\'' +
+                ", rightDesc='" + rightDesc + '\'' +
+                ", benefitsDesc='" + benefitsDesc + '\'' +
+                ", fixedAssets='" + fixedAssets + '\'' +
+                ", acceptStand='" + acceptStand + '\'' +
+                ", engineerEvaluate='" + engineerEvaluate + '\'' +
+                ", accordEvaluate='" + accordEvaluate + '\'' +
+                ", applicationEvaluate='" + applicationEvaluate + '\'' +
+                ", totalEvaluate='" + totalEvaluate + '\'' +
+                ", pmsRequire='" + pmsRequire + '\'' +
+                ", advice='" + advice + '\'' +
+                ", effectFlag='" + effectFlag + '\'' +
+                ", createStaffNo='" + createStaffNo + '\'' +
+                ", createStaffName='" + createStaffName + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 
     public RdmsProjBase(String projId, String projName, String projType, String appOrgNo, String appOrgOame, String uniteAppOrgNo, String uniteAppOrgName, int cycle, double totalBudget, String purpose, String safeDesc, String reliableDesc, String econDesc, String otherDesc, String achievementDesc, String realUser, String potentialUser, String content, String primeStaffNo, String primeUserDesc, String rightDesc, String benefitsDesc, String fixedAssets, String acceptStand, String engineerEvaluate, String accordEvaluate, String applicationEvaluate, String totalEvaluate, String pmsRequire, String advice, String effectFlag, String createStaffNo, String createStaffName, Date createDate) {
         this.projId = projId;

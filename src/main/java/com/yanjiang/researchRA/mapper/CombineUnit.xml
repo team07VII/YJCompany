@@ -2,24 +2,23 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="com.yanjiang.researchRA.mapper.ApplicationUnitMapper">
+<mapper namespace="com.yanjiang.researchRA.mapper.CombineUnitMapper">
 
     <!--<cache type="com.yanjiang.basis.utils.cache.RedisCache"/>-->
 
-    <sql id="ApplicationUnitColumns">
-        aid,aname
+    <sql id="CombineUnitColumns">
+        cid,cname
     </sql>
 
     <!--分页查询
    在mapper文件中用#{属性名}的是取传递过来的参数值,如果传递过来的参数是一个基本类型则可以用#{value}获取
    如果是pojo,则通过#{属性名}获取某个值-->
     <select id="selectPageBean"
-            resultType="com.yanjiang.researchRA.domain.ApplicationUnit"
+            resultType="com.yanjiang.researchRA.domain.CombineUnit"
             parameterType="com.yanjiang.basis.utils.PageBean">
         SELECT
-        <include refid="ApplicationUnitColumns"/>
-         FROM `application_unit` WHERE aname LIKE '%${parameter.aname}%'
+        <include refid="CombineUnitColumns"/>
+        FROM `combine_unit` WHERE cname LIKE '%${parameter.cname}%'
         LIMIT #{startIndex},#{pageSize};
     </select>
 
@@ -27,13 +26,13 @@
     <select id="getTotalRecord"
             resultType="java.lang.Integer"
             parameterType="com.yanjiang.basis.utils.PageBean">
-        SELECT COUNT(aid) FROM `application_unit` WHERE aname LIKE '%${parameter.aname}%'
+        SELECT COUNT(cid) FROM `combine_unit` WHERE cname LIKE '%${parameter.cname}%'
     </select>
 
-    <select id="selectAll" resultType="com.yanjiang.researchRA.domain.ApplicationUnit">
+    <select id="selectAll" resultType="com.yanjiang.researchRA.domain.CombineUnit">
         SELECT
-        <include refid="ApplicationUnitColumns"/>
-         FROM application_unit
+        <include refid="CombineUnitColumns"/>
+        FROM combine_unit
     </select>
 
 </mapper>

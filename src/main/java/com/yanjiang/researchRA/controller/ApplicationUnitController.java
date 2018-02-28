@@ -39,17 +39,17 @@ public class ApplicationUnitController {
         return result;
     }
 
-    @RequestMapping("/searchApplicationUnit")
-    @ResponseBody
-    public BaseResult<ApplicationUnit> searchApplicationUnit(){
-        List<ApplicationUnit> applicationUnits = applicationUnitService.selectAll();
-        /*将查询到的记过进行封装*/
-        BaseResult<ApplicationUnit> result = new BaseResult<>();
-        result.setTotal(100);//设置总记录数
-        result.setData(applicationUnits);//设置当前显示数据
-
-        return result;
-
-    }
+//    @RequestMapping("/searchApplicationUnit")
+//    @ResponseBody
+//    public BaseResult<ApplicationUnit> searchApplicationUnit(){
+//        List<ApplicationUnit> applicationUnits = applicationUnitService.selectAll();
+//        /*将查询到的记过进行封装*/
+//        BaseResult<ApplicationUnit> result = new BaseResult<>();
+//        result.setTotal(100);//设置总记录数
+//        result.setData(applicationUnits);//设置当前显示数据
+//
+//        return result;
+//
+//    }
 
 }

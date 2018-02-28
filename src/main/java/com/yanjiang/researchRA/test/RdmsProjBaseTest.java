@@ -28,13 +28,13 @@ public class RdmsProjBaseTest {
 
 
     }
-    @Test
-    public void insert(){
-        RdmsProjBase rdmsProjBase = new RdmsProjBase();
-        rdmsProjBase.setProjName("阳江");
-        int insert = rdmsProjBaseMapper.insert(rdmsProjBase);
-        System.out.println(insert);
-
-    }
+//    @Test
+//    public void insert(){
+//        RdmsProjBase rdmsProjBase = new RdmsProjBase();
+//        rdmsProjBase.setProjName("阳江");
+//        int insert = rdmsProjBaseMapper.insert(rdmsProjBase);
+//        System.out.println(insert);
+//
+//    }
 
 }

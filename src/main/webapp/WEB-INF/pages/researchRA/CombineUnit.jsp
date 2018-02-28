@@ -40,8 +40,8 @@
     >
         <div property="columns">
             <div type="indexcolumn" ></div>
-            <div field="aid" width="120" headerAlign="center" allowSort="true">联合申报单位ID</div>
-            <div field="aname" width="100%" headerAlign="center" allowSort="true">联合申报单位名称</div>
+            <div field="cid" width="120" headerAlign="center" allowSort="true">联合申报单位ID</div>
+            <div field="cname" width="100%" headerAlign="center" allowSort="true">联合申报单位名称</div>
         </div>
     </div>
 
@@ -57,9 +57,10 @@
     mini.parse();
 
     var grid = mini.get("grid1");
+   // grid.load();
 
     //动态设置URL
-    grid.setUrl("/researchRA/selectApplicationUnit");
+    grid.setUrl("/researchRA/selectCombineUnit");
     //也可以动态设置列 grid.setColumns([]);
 
     grid.load();
@@ -70,7 +71,7 @@
     }
     function search() {
         var key = mini.get("key").getValue();
-        grid.load({ aname: key });
+        grid.load({ cname: key });
     }
     function onKeyEnter(e) {
         search();

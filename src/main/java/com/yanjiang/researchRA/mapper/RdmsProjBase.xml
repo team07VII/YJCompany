@@ -78,43 +78,90 @@
 
 
     <insert id="insert" parameterType="com.yanjiang.researchRA.domain.RdmsProjBase">
-        INSERT INTO `PMS.RDMS_PROJ_BASE`
-        (<include refid="Base_Column_List"/> )
+        INSERT INTO `PMS.RDMS_PROJ_BASE` (PROJ_ID,
+        PROJ_NAME,
+        APP_ORG_NO,
+        APP_ORG_NAME,
+        UNITE_APP_ORG_NO,
+        UNITE_APP_ORG_NAME,
+        PURPOSE,
+        SAFE_DESC,
+        RELIABLE_DESC,
+        ECON_DESC,
+        OTHER_DESC,
+        CYCLE,
+        ACHIEVEMENT_DESC,
+        REAL_USER,
+        POTENTIAL_USER,
+        CONTENT,
+        TOTAL_BUDGET,
+        RIGHT_DESC,
+        BENEFITS_DESC,
+        FIXED_ASSETS,
+        ACCEPT_STAND
+        )
         VALUES
-        (#{PROJ_ID},
-        #{PROJ_NAME},
-        #{PROJ_TYPE},
-        #{APP_ORG_NO},
-        #{APP_ORG_NAME},
-        #{UNITE_APP_ORG_NO},
-        #{UNITE_APP_ORG_NAME},
-        #{CYCLE},
-        #{TOTAL_BUDGET},
-        #{PURPOSE},
-        #{SAFE_DESC},
-        #{RELIABLE_DESC},
-        #{ECON_DESC},
-        #{OTHER_DESC},
-        #{ACHIEVEMENT_DESC},
-        #{REAL_USER},
-        #{POTENTIAL_USER},
-        #{CONTENT},
-        #{PRIME_STAFF_NO},
-        #{PRIME_USER_DESC},
-        #{RIGHT_DESC},
-        #{BENEFITS_DESC},
-        #{FIXED_ASSETS},
-        #{ACCEPT_STAND},
-        #{ENGINEER_EVALUATE},
-        #{ACCORD_EVALUATE},
-        #{APPLICATION_EVALUATE},
-        #{TOTAL_EVALUATE},
-        #{PMS_REQUIRE},
-        #{ADVICE},
-        #{EFFECT_FLAG},
-        #{CREATE_STAFF_NO},
-        #{CREATE_STAFF_NAME},
-        #{CREATE_DATE})
+        (#{projId},
+        #{projName},
+        #{appOrgNo},
+        #{appOrgOame},
+        #{uniteAppOrgNo},
+        #{uniteAppOrgName},
+        #{purpose},
+        #{safeDesc},
+        #{reliableDesc},
+        #{econDesc},
+        #{otherDesc},
+        #{cycle},
+        #{achievementDesc},
+        #{realUser},
+        #{potentialUser},
+        #{content},
+        #{totalBudget},
+        #{rightDesc},
+        #{benefitsDesc},
+        #{fixedAssets},
+        #{acceptStand})
     </insert>
+
+    <!--<insert id="insert" parameterType="com.yanjiang.researchRA.domain.RdmsProjBase">-->
+        <!--INSERT INTO `PMS.RDMS_PROJ_BASE`-->
+        <!--(<include refid="Base_Column_List"/> )-->
+        <!--VALUES-->
+        <!--(#{projId},-->
+        <!--#{projName},-->
+        <!--#{PROJ_TYPE},-->
+        <!--#{APP_ORG_NO},-->
+        <!--#{APP_ORG_NAME},-->
+        <!--#{UNITE_APP_ORG_NO},-->
+        <!--#{UNITE_APP_ORG_NAME},-->
+        <!--#{CYCLE},-->
+        <!--#{TOTAL_BUDGET},-->
+        <!--#{PURPOSE},-->
+        <!--#{SAFE_DESC},-->
+        <!--#{RELIABLE_DESC},-->
+        <!--#{ECON_DESC},-->
+        <!--#{OTHER_DESC},-->
+        <!--#{ACHIEVEMENT_DESC},-->
+        <!--#{REAL_USER},-->
+        <!--#{POTENTIAL_USER},-->
+        <!--#{CONTENT},-->
+        <!--#{PRIME_STAFF_NO},-->
+        <!--#{PRIME_USER_DESC},-->
+        <!--#{RIGHT_DESC},-->
+        <!--#{BENEFITS_DESC},-->
+        <!--#{FIXED_ASSETS},-->
+        <!--#{ACCEPT_STAND},-->
+        <!--#{ENGINEER_EVALUATE},-->
+        <!--#{ACCORD_EVALUATE},-->
+        <!--#{APPLICATION_EVALUATE},-->
+        <!--#{TOTAL_EVALUATE},-->
+        <!--#{PMS_REQUIRE},-->
+        <!--#{ADVICE},-->
+        <!--#{EFFECT_FLAG},-->
+        <!--#{CREATE_STAFF_NO},-->
+        <!--#{CREATE_STAFF_NAME},-->
+        <!--#{CREATE_DATE})-->
+    <!--</insert>-->
 
 </mapper>

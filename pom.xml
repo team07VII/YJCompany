@@ -232,11 +232,11 @@
       <version>${shiro-version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.6.4</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.slf4j</groupId>-->
+      <!--<artifactId>slf4j-log4j12</artifactId>-->
+      <!--<version>1.6.4</version>-->
+    <!--</dependency>-->
 
     <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
     <dependency>
