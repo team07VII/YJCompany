@@ -200,16 +200,90 @@ public class BasisController {
         return "main";
     }
 
-//    @ResponseBody
-//    @RequestMapping("someJson")
-//    public String a(){
+    @ResponseBody
+    @RequestMapping("someJson")
+    public String someJson(){
+
+        Subject subject = SecurityUtils.getSubject();
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("[" +
+                  "{ id: 'front', text: '首页',}," +
+                  "{ id: 'frontPage', pid: 'front', text: '公司简介', url: 'page/RightBody_Welcome' }," +
+
+                  "{ id: 'user', text: '个人中心',}," +
+                  "{ id: 'addUser', pid: 'user', text: '个人工作平台', url: 'page/RightBody_Welcome' }," +
+
+                  "{ id: 'right', text: '综合管理',}," +
+                  "{ id: 'management', pid: 'right', text: '管理', url: 'page/RightBody_Welcome' }," +
+
+                  "{ id: 'science', text: '科研项目管理'}," +
+                  "{ id: 'techonologyContractApply', pid: 'science', text: '科研项目合同推荐申报', url: 'researchContract/techonologyContractApply'}," +
+                  "{ id: 'projectApplyBasic', pid: 'science', text: '科研项目申报', url: 'researchRA/projectApplyBasic' }," +
+                  "{ id: 'addRight', pid: 'science', text: '科研项目申报与评审', url: 'researchRA/projectApplyBasic' },"
+        );
+
+        if (subject.hasRole("部门经理")) {
+            sb.append("{ id: 'departmentManagerApproval', pid: 'science', text: '部门经理审批', url: 'researchRA/departmentManagerApproval' },");
+        }
+
+        if (subject.hasRole("工程师组织")) {
+            sb.append("{ id: 'engineerApproval', pid: 'science', text: '工程师组织审核', url: 'researchRA/engineerApproval' },");
+        }
+
+        if (subject.hasRole("评审小组组长")) {
+            sb.append("{ id: 'teamLeaderApproval', pid: 'science', text: '评审小组组长填写评审意见', url: 'researchRA/teamLeaderApproval' },");
+        }
+
+        if (subject.hasRole("科技办经理")) {
+            sb.append("{ id: 'technologyManagerApproval', pid: 'science', text: '科技办经理审批', url: 'researchRA/technologyManagerApproval' },");
+        }
+
+        if (subject.hasRole("财务部")) {
+            sb.append("{ id: 'financialApproval', pid: 'science', text: '财务部审批', url: 'researchRA/financialApproval' },");
+        }
+
+        if (subject.hasRole("总经理")) {
+            sb.append("{ id: 'managerApproval', pid: 'science', text: '总经理审批', url: 'researchContract/managerApproval' },");
+        }
+
+        if (subject.hasRole("admin")) {
+            sb.append("{ id: 'engineerApproval', pid: 'science', text: '工程师组织审核', url: 'researchRA/engineerApproval' }," +
+                      "{ id: 'teamLeaderApproval', pid: 'science', text: '评审小组组长填写评审意见', url: 'researchRA/teamLeaderApproval' }," +
+                      "{ id: 'departmentManagerApproval', pid: 'science', text: '部门经理审批', url: 'researchRA/departmentManagerApproval' }," +
+                      "{ id: 'technologyManagerApproval', pid: 'science', text: '科技办经理审批', url: 'researchRA/technologyManagerApproval' }," +
+                      "{ id: 'financialApproval', pid: 'science', text: '财务部审批', url: 'researchRA/financialApproval' }," +
+                      "{ id: 'managerApproval', pid: 'science', text: '总经理审批', url: 'researchContract/managerApproval' },"
+            );
+        }
+
+        sb.append("]");
+
+        System.out.println(sb.toString());
+
+        return sb.toString();
+    }
+
+//    { id: "front", text: "首页",},
+//    { id: "frontPage", pid: "front", text: "公司简介", url: "page/RightBody_Welcome" },
 //
-//        String a = "[" +
-//                "{ id: 'front', text: '首页',}," +
-//                "{ id: 'frontPage', pid: 'front', text: '公司简介', url: 'page/RightBody_Welcome' }]";
+//    { id: "user", text: "个人中心",},
+//    { id: "addUser", pid: "user", text: "个人工作平台", url: "page/RightBody_Welcome" },
+
+//    { id: "right", text: "综合管理",},
+//    { id: "management", pid: "right", text: "管理", url: "page/RightBody_Welcome" },
 //
-//        return a;
-//    }
+//    { id: "science", text: "科研项目管理"},
+//    { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报", url: "researchContract/techonologyContractApply"},
+//    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "researchRA/projectApplyBasic" },
+//    { id: "engineerApproval", pid: "science", text: "工程师组织审核", url: "researchRA/engineerApproval" },
+//    { id: "teamLeaderApproval", pid: "science", text: "评审小组组长填写评审意见", url: "researchRA/teamLeaderApproval" },
+//    { id: "projectApplyBasic", pid: "science", text: "科研项目申报", url: "researchRA/projectApplyBasic" },
+//    { id: "departmentManagerApproval", pid: "science", text: "部门经理审批", url: "researchRA/departmentManagerApproval" },
+//    { id: "technologyManagerApproval", pid: "science", text: "科技办经理审批", url: "researchRA/technologyManagerApproval" },
+//    { id: "financialApproval", pid: "science", text: "财务部审批", url: "researchRA/financialApproval" },
+//    { id: "managerApproval", pid: "science", text: "总经理审批", url: "researchContract/managerApproval" },
 
 
 }

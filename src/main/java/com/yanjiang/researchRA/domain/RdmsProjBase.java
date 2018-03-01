@@ -429,44 +429,6 @@ public class RdmsProjBase implements Serializable {
         this.createDate = createDate;
     }
 
-    @Override
-    public String toString() {
-        return "RdmsProjBase{" +
-                "projId='" + projId + '\'' +
-                ", projName='" + projName + '\'' +
-                ", projType='" + projType + '\'' +
-                ", appOrgNo='" + appOrgNo + '\'' +
-                ", appOrgOame='" + appOrgOame + '\'' +
-                ", uniteAppOrgNo='" + uniteAppOrgNo + '\'' +
-                ", uniteAppOrgName='" + uniteAppOrgName + '\'' +
-                ", cycle=" + cycle +
-                ", totalBudget=" + totalBudget +
-                ", purpose='" + purpose + '\'' +
-                ", safeDesc='" + safeDesc + '\'' +
-                ", reliableDesc='" + reliableDesc + '\'' +
-                ", econDesc='" + econDesc + '\'' +
-                ", otherDesc='" + otherDesc + '\'' +
-                ", achievementDesc='" + achievementDesc + '\'' +
-                ", realUser='" + realUser + '\'' +
-                ", potentialUser='" + potentialUser + '\'' +
-                ", content='" + content + '\'' +
-                ", primeStaffNo='" + primeStaffNo + '\'' +
-                ", primeUserDesc='" + primeUserDesc + '\'' +
-                ", rightDesc='" + rightDesc + '\'' +
-                ", benefitsDesc='" + benefitsDesc + '\'' +
-                ", fixedAssets='" + fixedAssets + '\'' +
-                ", acceptStand='" + acceptStand + '\'' +
-                ", engineerEvaluate='" + engineerEvaluate + '\'' +
-                ", accordEvaluate='" + accordEvaluate + '\'' +
-                ", applicationEvaluate='" + applicationEvaluate + '\'' +
-                ", totalEvaluate='" + totalEvaluate + '\'' +
-                ", pmsRequire='" + pmsRequire + '\'' +
-                ", advice='" + advice + '\'' +
-                ", effectFlag='" + effectFlag + '\'' +
-                ", createStaffNo='" + createStaffNo + '\'' +
-                ", createStaffName='" + createStaffName + '\'' +
-                ", createDate=" + createDate +
-                '}';
-    }
+
 }
 

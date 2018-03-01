@@ -64,7 +64,7 @@
         <div class="mini-splitter" style="width:99%;height:100%">
             <%--左侧menu--%>
             <%-- /resources/text/outlookmenu.txt --%>
-            <div size="15%" showCollapseButton="true">
+            <div style="background-color:rgb(229,225,230)" size="15%" showCollapseButton="true">
                 <div id="leftTree" class="mini-outlookmenu" url="/someJson"
             <div style="background-color:rgb(229,225,230)" size="15%" showCollapseButton="true">
                 <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt"
