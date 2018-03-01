@@ -40,7 +40,7 @@ public class BasisController {
     @RequestMapping("/home")
     public String main(String username, String password, HttpServletRequest request, Model model) {
 
-        if (username.equals("") || password.equals("")) {
+        if (username == null || password == null || username.equals("") || password.equals("")) {
             model.addAttribute("msg", "用户名和密码不能为空");
             return "login";
         }

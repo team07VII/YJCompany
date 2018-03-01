@@ -40,7 +40,7 @@
 <body>
 <%--http://music.163.com/#/song?id=849739--%>
 <div id="topbk">
-    <span style="float: left; padding-left: 80px"><h3>当前用户: ${username}</h3></span>
+    <span style="float: left; padding-left: 500px; padding-top: 5px"><h3>当前用户: ${username}</h3></span>
     <button style="float: right" onclick="exit()">退出登录</button>
     <button style="float: right">个人工作台</button>
 </div>
@@ -66,8 +66,6 @@
             <%-- /resources/text/outlookmenu.txt --%>
             <div style="background-color:rgb(229,225,230)" size="15%" showCollapseButton="true">
                 <div id="leftTree" class="mini-outlookmenu" url="/someJson"
-            <div style="background-color:rgb(229,225,230)" size="15%" showCollapseButton="true">
-                <div id="leftTree" class="mini-outlookmenu" url="/resources/text/outlookmenu.txt"
                      onitemselect="onItemSelect"
                      idField="id" parentField="pid" textField="text" borderStyle="border:0">
                 </div>
