@@ -36,10 +36,9 @@
             height: 25px;
         }
 
-
         .trTitle {
 
-            background: url(/resources/images/tr-bkground1.png) repeat-x 0 ;
+            background: url(/resources/images/tr-bkground1.png) repeat-x 0;
             color: #427dc0;
         }
 
@@ -61,10 +60,14 @@
          activeIndex="0"
          plain="false">
         <%--基本信息TAB--%>
-        <div title="项目基本信息" >
+        <div title="项目基本信息">
             <table cellpadding="1" cellspacing="2" class="table1">
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">项目基本信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">
+                            项目基本信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目名称 <font color="red">※</font></td>
@@ -88,10 +91,15 @@
                 </tr>
                 <tr>
                     <td style="width:120px">目的 <font color="red">※</font></td>
-                    <td colspan="3"><input name="purpose" style="width: 100%" class="mini-textarea" required="true"/></td>
+                    <td colspan="3"><input name="purpose" style="width: 100%" class="mini-textarea" required="true"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">与核电生产运营安全性,可靠性,经济的适应分析</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">
+                            与核电生产运营安全性,可靠性,经济的适应分析
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width:120px">安全性</td>
@@ -106,42 +114,53 @@
                     <td><input style="width: 100%" class="mini-textarea" required="true" name="otherDesc"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">其他信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">其他信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width:120px">成果应用</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="achievementDesc"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"
+                                           name="achievementDesc"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">实际用户</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="realUser"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="realUser"/>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width:120px">潜在用户</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true" name="potentialUser"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"
+                                           name="potentialUser"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目完成周期</td>
-                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int" required="true" name="cycle"/></td>
+                    <td colspan="3"><input style="width: 100%" class="mini-textarea" vtype="int" required="true"
+                                           name="cycle"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">项目内容路径简介</td>
                     <td colspan="3"><input style="width: 100%" class="mini-textarea" required="true"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">预算信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">预算信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width:120px">总预算 <font color="red">※</font></td>
-                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float" required="true" name="totalBudget"/></td>
+                    <td><input style="width: 100%;" type="text" class="mini-textarea" vtype="float" required="true"
+                               name="totalBudget"/></td>
                     <td style="width:120px">公司经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true" name="companyBudget"/></td>
                 </tr>
                 <tr>
                     <td style="width:120px">外部支持经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true" name="outsupportBudget"/></td>
                     <td style="width:120px">国家经费</td>
-                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true"/></td>
+                    <td><input style="width: 100%" class="mini-textarea" vtype="float" required="true" name="countryBudget"/></td>
                 </tr>
 
             </table>
@@ -150,14 +169,21 @@
         <div title="项目其他信息">
             <table cellpadding="1" cellspacing="2" class="table1">
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">技术第一负责人信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">
+                            技术第一负责人信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width: 100px">姓名、专业经历和能力简述</td>
-                    <td><input style="width: 100%;" class="mini-textarea" required="true"/></td>
+                    <td><input style="width: 100%;" class="mini-textarea" required="true" name="primeUserDesc"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">产品信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">产品信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>产品形式</td>
@@ -175,15 +201,16 @@
                         <%--{'id':'10008','text':'其他_____'},]">--%>
                         <%--</div>--%>
                         <div style="horiz-align: center">
-                            <input type="checkbox">专题报告
-                            <input type="checkbox">技术方案
+                            <input type="checkbox" name="productKind">专题报告
+                            <input type="checkbox" name="">技术方案
                             <input type="checkbox">技术标准
                             <input type="checkbox">硬件产品
                             <input type="checkbox">生产性文件
                             <input type="checkbox">设计文件
                             <input type="checkbox">计算机软件
                             <input type="checkbox" onclick="energyTypeCheck(this);">其他
-                            <input style="display:none; height: 120%; float: right" name="energyType" type="text" id="Checkbox5"/>
+                            <input style="display:none; height: 120%; float: right" name="energyType" type="text"
+                                   id="Checkbox5"/>
                         </div>
                     </td>
 
@@ -206,19 +233,26 @@
                     <td><input style="width: 100%; " class="mini-textarea" required="true" name="acceptStand"/></td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">附件信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">附件信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>立项报告书 <font color="red">※</font></td>
                     <td id="upload">
                         <div>
-                            <input class="mini-htmlfile" name="Fdata" id="file1" style="width:93%;" required="true" buttonText="Browse"/>
+                            <input class="mini-htmlfile" name="projectReport" id="file1" style="width:93%;" required="true"
+                                   buttonText="Browse"/>
                             <%--<input style="float: right" type="button" value="上传" onclick="ajaxFileUpload()"/>--%>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);" ><div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">流程信息</div></td>
+                    <td class="trTitle" colspan="4" style="color:rgb(38,64,140);">
+                        <div class="mini-button" style="background: inherit;border: 0px" iconCls="icon-downgrade">流程信息
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width: 100px">审批(部门经理) <font color="red">※</font></td>
@@ -317,7 +351,7 @@
     }
 
 
-    function energyTypeCheck (chk) {
+    function energyTypeCheck(chk) {
         var Checkbox5 = document.getElementById('Checkbox5');
         if (chk.checked) {
             Checkbox5.style.display = 'block';
@@ -325,7 +359,6 @@
             Checkbox5.style.display = 'none';
         }
     }
-
 
 
     //    //先找到tab组件
@@ -366,9 +399,9 @@
 
 
         $.ajaxFileUpload({
-            url:"fileUploac.action",
-            fileElementId:"${"upload"}",
-            success:function (d) {
+            url: "fileUploac.action",
+            fileElementId: "${"upload"}",
+            success: function (d) {
 
             }
 

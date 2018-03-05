@@ -37,6 +37,13 @@
         <result property="createStaffNo" column="CREATE_STAFF_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
         <result property="createStaffName" column="CREATE_STAFF_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
         <result property="createDate" column="CREATE_DATE" jdbcType="DATE" javaType="java.util.Date" />
+        <result property="companyBudget" column="COMPANY_BUDGET" jdbcType="NUMERIC" javaType="java.lang.Double" />
+        <result property="countryBudget" column="COUNTRY_BUDGET" jdbcType="NUMERIC" javaType="java.lang.Double" />
+        <result property="outsupportBudget" column="OUTSUPPORT_BUDGET" jdbcType="NUMERIC" javaType="java.lang.Double" />
+        <result property="projectReport" column="PROJECT_REPORT" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="productKind" column="PRODUCT_KIND" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="departmentManagerNo" column="DEPARTMENT_MANAGER_NO" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="departmentManagerName" column="DEPARTMENT_MANAGER_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
     </resultMap>
 
     <sql id="Base_Column_List" >
@@ -98,7 +105,12 @@
         RIGHT_DESC,
         BENEFITS_DESC,
         FIXED_ASSETS,
-        ACCEPT_STAND
+        ACCEPT_STAND,
+        COMPANY_BUDGET,
+        COUNTRY_BUDGET,
+        OUTSUPPORT_BUDGET,
+        PROJECT_REPORT,
+        PRODUCT_KIND
         )
         VALUES
         (#{projId},
@@ -121,7 +133,12 @@
         #{rightDesc},
         #{benefitsDesc},
         #{fixedAssets},
-        #{acceptStand})
+        #{acceptStand},
+        #{companyBudget},
+        #{countryBudget},
+        #{outsupportBudget},
+        #{projectReport},
+        #{productKind})
     </insert>
 
     <!--<insert id="insert" parameterType="com.yanjiang.researchRA.domain.RdmsProjBase">-->
