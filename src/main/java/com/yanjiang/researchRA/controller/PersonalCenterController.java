@@ -1,10 +1,12 @@
 package com.yanjiang.researchRA.controller;
 
+import com.yanjiang.researchRA.domain.PersonalCenter;
 import com.yanjiang.researchRA.service.PersonalCenterService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by dllo on 18/3/5.
@@ -18,7 +20,8 @@ public class PersonalCenterController {
 
     @RequestMapping("RightBody_Welcome")
     private String selectAllPersonalCenter(){
-        personalCenterService.selectAllPersonalCenter();
+        List<PersonalCenter> personalCenters = personalCenterService.selectAllPersonalCenter();
+        System.out.println(personalCenters);
         return "";
     }
 
