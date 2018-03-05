@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="com.yanjiang.researchRA.mapper.PersonalCenterMapper">
+    <resultMap id="PersonalCenter" type="com.yanjiang.researchRA.domain.PersonalCenter">
+        <id property="processId" column="PROCESS_NO"/>
+        <result property="processName" column="PROCESS_NAME" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        <result property="departmentName" column="DEPARTMENT_NAME" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        <result property="currentLink" column="CURRENT_LINK" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        <result property="applyName" column="APPLY_NAME" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        <result property="applyTime" column="APPLY_TIME" jdbcType="DATE" javaType="java.util.Date"/>
+    </resultMap>
+    <sql id="PersonalCenterColumns">
+        processId,processName,departmentName,currentLink,applyName,applyTime
+    </sql>
+
+    <select id="selectAllPersonalCenter" resultMap="com.yanjiang.researchRA.domain.PersonalCenter">
+        SELECT
+        <include refid="PersonalCenterColumns"/>
+        FROM yj_personal_center
+
+    </select>
+</mapper>

@@ -26,6 +26,25 @@ public class RdmsProjBase implements Serializable {
     private int cycle;
 //    总预算
     private double totalBudget;
+//    公司经费
+    private double companyBudget;
+//    国家经费
+    private double countryBudget;
+
+//    外部支持经费
+    private  double outsupportBudget;
+
+//    立项报告书
+    private String  projectReport;
+
+//    部门经理ID
+    private String departmentManagerNo;
+
+//    部门经理名称
+    private String departmentManagerName;
+
+//    产品形式
+    private String productKind;
 //    项目目的
     private String purpose;
 //    安全性描述
@@ -46,7 +65,7 @@ public class RdmsProjBase implements Serializable {
     private String content;
 //    项目负责人
     private String primeStaffNo;
-//    项目负责人描述
+//    项目负责人描述(姓名,专业经历和能力的简述)
     private String primeUserDesc;
 //    预计产权说明
     private String rightDesc;
@@ -89,6 +108,13 @@ public class RdmsProjBase implements Serializable {
                 ", uniteAppOrgName='" + uniteAppOrgName + '\'' +
                 ", cycle=" + cycle +
                 ", totalBudget=" + totalBudget +
+                ", companyBudget=" + companyBudget +
+                ", countryBudget=" + countryBudget +
+                ", outsupportBudget=" + outsupportBudget +
+                ", projectReport='" + projectReport + '\'' +
+                ", departmentManagerNo='" + departmentManagerNo + '\'' +
+                ", departmentManagerName='" + departmentManagerName + '\'' +
+                ", productKind='" + productKind + '\'' +
                 ", purpose='" + purpose + '\'' +
                 ", safeDesc='" + safeDesc + '\'' +
                 ", reliableDesc='" + reliableDesc + '\'' +
@@ -117,7 +143,8 @@ public class RdmsProjBase implements Serializable {
                 '}';
     }
 
-    public RdmsProjBase(String projId, String projName, String projType, String appOrgNo, String appOrgOame, String uniteAppOrgNo, String uniteAppOrgName, int cycle, double totalBudget, String purpose, String safeDesc, String reliableDesc, String econDesc, String otherDesc, String achievementDesc, String realUser, String potentialUser, String content, String primeStaffNo, String primeUserDesc, String rightDesc, String benefitsDesc, String fixedAssets, String acceptStand, String engineerEvaluate, String accordEvaluate, String applicationEvaluate, String totalEvaluate, String pmsRequire, String advice, String effectFlag, String createStaffNo, String createStaffName, Date createDate) {
+    public RdmsProjBase(String projId, String projName, String projType, String appOrgNo, String appOrgOame, String uniteAppOrgNo, String uniteAppOrgName, int cycle, double totalBudget, double companyBudget, double countryBudget, double outsupportBudget, String projectReport, String departmentManagerNo, String departmentManagerName, String productKind, String purpose, String safeDesc, String reliableDesc, String econDesc, String otherDesc, String achievementDesc, String realUser, String potentialUser, String content, String primeStaffNo, String primeUserDesc, String rightDesc, String benefitsDesc, String fixedAssets, String acceptStand, String engineerEvaluate, String accordEvaluate, String applicationEvaluate, String totalEvaluate, String pmsRequire,
+                        String advice, String effectFlag, String createStaffNo, String createStaffName, Date createDate) {
         this.projId = projId;
         this.projName = projName;
         this.projType = projType;
@@ -127,6 +154,13 @@ public class RdmsProjBase implements Serializable {
         this.uniteAppOrgName = uniteAppOrgName;
         this.cycle = cycle;
         this.totalBudget = totalBudget;
+        this.companyBudget = companyBudget;
+        this.countryBudget = countryBudget;
+        this.outsupportBudget = outsupportBudget;
+        this.projectReport = projectReport;
+        this.departmentManagerNo = departmentManagerNo;
+        this.departmentManagerName = departmentManagerName;
+        this.productKind = productKind;
         this.purpose = purpose;
         this.safeDesc = safeDesc;
         this.reliableDesc = reliableDesc;
@@ -429,5 +463,60 @@ public class RdmsProjBase implements Serializable {
         this.createDate = createDate;
     }
 
+    public double getCompanyBudget() {
+        return companyBudget;
+    }
+
+    public void setCompanyBudget(double companyBudget) {
+        this.companyBudget = companyBudget;
+    }
+
+    public double getCountryBudget() {
+        return countryBudget;
+    }
+
+    public void setCountryBudget(double countryBudget) {
+        this.countryBudget = countryBudget;
+    }
+
+    public double getOutsupportBudget() {
+        return outsupportBudget;
+    }
+
+    public void setOutsupportBudget(double outsupportBudget) {
+        this.outsupportBudget = outsupportBudget;
+    }
+
+    public String getProjectReport() {
+        return projectReport;
+    }
+
+    public void setProjectReport(String projectReport) {
+        this.projectReport = projectReport;
+    }
+
+    public String getDepartmentManagerNo() {
+        return departmentManagerNo;
+    }
+
+    public void setDepartmentManagerNo(String departmentManagerNo) {
+        this.departmentManagerNo = departmentManagerNo;
+    }
+
+    public String getDepartmentManagerName() {
+        return departmentManagerName;
+    }
+
+    public void setDepartmentManagerName(String departmentManagerName) {
+        this.departmentManagerName = departmentManagerName;
+    }
+
+    public String getProductKind() {
+        return productKind;
+    }
+
+    public void setProductKind(String productKind) {
+        this.productKind = productKind;
+    }
 }
 

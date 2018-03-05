@@ -105,8 +105,6 @@ public class ResearchRAController {
         return "researchRA/projectApplyBasic";
 
 
-
-
     }
 
 }

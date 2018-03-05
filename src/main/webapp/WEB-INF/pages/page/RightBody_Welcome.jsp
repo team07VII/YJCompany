@@ -26,7 +26,7 @@
             border: 1px solid RGB(214, 230, 217);
             border-collapse: collapse;
             padding: 2px;
-            background-color: RGB(239, 248, 254);;
+            background-color: RGB(239, 248, 254);
             padding: 3px;
             height: 25px;
         }
@@ -59,13 +59,18 @@
                                         <%--<input id="date2" style="width: 200%" class="mini-datepicker"/>--%>
                                         <input property="editor" class="mini-datepicker" style="width:100%;"/>
                                     </td>
+                                    <%--<td style="width: 20%"></td>--%>
+                                    <%--<td style="width:80px">流程名称</td>--%>
+                                    <%--<td>--%>
+                                        <%--<input style="width:100%;"class="mini-buttonedit"--%>
+                                               <%--allowInput="false"--%>
+                                               <%--onbuttonclick="onStudentButtonEdit"--%>
+                                               <%--name="sid" textName="sname"/>--%>
+                                    <%--</td>--%>
                                     <td style="width: 20%"></td>
-                                    <td style="width:80px">流程名称</td>
+                                    <td style="width:80px">关键字</td>
                                     <td>
-                                        <input style="width:100%;"class="mini-buttonedit"
-                                               allowInput="false"
-                                               onbuttonclick="onStudentButtonEdit"
-                                               name="sid" textName="sname"/>
+                                        <input style="width: 100%"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -78,19 +83,23 @@
                                                name="staffId" textName="staffName"/>
                                     </td>
                                     <td style="width: 20%"></td>
-                                    <td style="width:80px">关键字</td>
-                                    <td>
-                                        <input style="width: 100%"/>
-                                    </td>
-
-                                </tr>
-                                <tr>
                                     <td style="width:80px">所属部门</td>
                                     <td>
-                                        <input style="width: 100%"/>
+                                    <input style="width:100%;"class="mini-buttonedit"
+                                    allowInput="false"
+                                    onbuttonclick="onStudentButtonEdit"
+                                    name="sid" textName="sname"/>
                                     </td>
-                                    <td style="width: 20%"></td>
+
+
                                 </tr>
+                                <%--<tr>--%>
+                                    <%--<td style="width:80px">所属部门</td>--%>
+                                    <%--<td>--%>
+                                        <%--<input style="width: 100%"/>--%>
+                                    <%--</td>--%>
+                                    <%--<td style="width: 20%"></td>--%>
+                                <%--</tr>--%>
                             </table>
                         </div>
                     <%--</div>--%>
@@ -152,7 +161,7 @@
                                     <td>
                                         <input style="width:100%;"class="mini-buttonedit"
                                                allowInput="false"
-                                               onbuttonclick="onStudentButtonEdit"
+                                               onbuttonclick="onPeopleButtonEdit"
                                                name="sid" textName="sname"/>
                                     </td>
                                 </tr>
@@ -163,7 +172,7 @@
                                                class="mini-buttonedit"
                                                allowInput="false"
                                                onbuttonclick="onPeopleButtonEdit"
-                                               name="staffId" textName="staffName"/>
+                                               name="sid" textName="sname"/>
                                     </td>
                                     <td style="width: 20%"></td>
                                     <td style="width:80px">关键字</td>

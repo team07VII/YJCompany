@@ -9,6 +9,7 @@ import com.yanjiang.yjStaff.domain.YjStaff;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
 
 public interface YjStaffMapper {
 
@@ -20,4 +21,5 @@ public interface YjStaffMapper {
 
     List<YjStaff> selectAll();
 
+    Set<String> getRoles(String userName);
 }
