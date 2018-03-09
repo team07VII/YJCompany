@@ -58,7 +58,10 @@ public class SendEmail implements Utils {
         }
 
         try {
+//            为邮件发送中填写发件邮箱和发件邮箱的规格
             Session session = MailUtils.createSession("smtp.163.com", "15842209819@163.com", "xxl101354@");
+
+//            通过拼接字符串的给邮箱发送邮件
             Mail mail = new Mail("15842209819@163.com", email, "YJ Company",
 
                     "<div style=\"background: #17212e\">" + "<div style=\"padding-top: 32px\"></div>" +

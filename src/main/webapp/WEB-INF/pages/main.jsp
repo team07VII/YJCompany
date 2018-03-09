@@ -40,25 +40,12 @@
 <body>
 <%--http://music.163.com/#/song?id=849739--%>
 <div id="topbk">
-    <span style="float: left; padding-left: 900px"><h3>当前用户: ${username}</h3></span>
-    <a href="">发送邮件</a>
+    <span style="float: left; padding-left: 500px"><h3>当前用户: ${username}</h3></span>
+    <button style="float: right" onclick="email()">个人工作台</button>
     <button style="float: right" onclick="exit()">退出登录</button>
     <button style="float: right">个人工作台</button>
 </div>
 <div  id="layout1" class="mini-layout" style="width:100%;height:90%;background-color:RGB(41,105,166);" borderStyle="border:solid 1px #aaa;">
-    <%--<div  region="north"--%>
-         <%--style="background-color: #e8ecf6;float: left;width: 100%;height: 15px">--%>
-         <%--&lt;%&ndash;&ndash;%&gt;--%>
-        <%-- 背景音乐 --%>
-        <embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">
-
-                <%--<span style="float: left"><h3>当前用户: ${username}</h3></span>--%>
-                <%--<button style="float: right" onclick="exit()">退出登录</button>--%>
-                <%--<button style="float: right">个人工作台</button>--%>
-
-                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-    <%--</div>--%>
-        <%--<div style="background-image:url(/resources/images/top.png)">--%>
 
         <%--</div>--%>
     <div title="center" region="center">
@@ -78,6 +65,9 @@
         </div>
     </div>
 </div>
+<%-- 背景音乐 --%>
+<embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">
+
 <script type="text/javascript">
 
     mini.parse();
@@ -93,6 +83,16 @@
 
 //        alert(111)
         $.post("exit", function () {
+            window.location = "login";
+        })
+
+
+    }
+
+    function email() {
+
+//        alert(111)
+        $.post("email", function () {
             window.location = "login";
         })
 

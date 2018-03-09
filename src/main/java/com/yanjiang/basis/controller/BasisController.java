@@ -132,8 +132,10 @@ public class BasisController {
     @RequestMapping("/exit")
     public String exit(HttpServletRequest request, HttpServletResponse response) {
 
+//        移除在session域中储存的用户名
         request.getSession().removeAttribute("username");
 
+//        获取 shiro 的权限
         Subject currentUser = SecurityUtils.getSubject();
 
         currentUser.logout();
@@ -208,6 +210,7 @@ public class BasisController {
         return "main";
     }
 
+//    发送邮件的功能 (待添加)
     @RequestMapping("email")
     public String email(){
 
@@ -226,10 +229,13 @@ public class BasisController {
     @RequestMapping("someJson")
     public String someJson(){
 
+//        获取 shiro 的权限
         Subject subject = SecurityUtils.getSubject();
 
+//        获取可变化字符串
         StringBuilder sb = new StringBuilder();
 
+//        根据权限的分配来控制前端的显示
         sb.append("[" +
                   "{ id: 'front', text: '首页',}," +
                   "{ id: 'frontPage', pid: 'front', text: '公司简介', url: 'page/RightBody_Welcome' }," +
@@ -281,30 +287,9 @@ public class BasisController {
 
         sb.append("]");
 
-//        System.out.println(sb.toString());
 
         return sb.toString();
     }
-
-//    { id: "front", text: "首页",},
-//    { id: "frontPage", pid: "front", text: "公司简介", url: "page/RightBody_Welcome" },
-//
-//    { id: "user", text: "个人中心",},
-//    { id: "addUser", pid: "user", text: "个人工作平台", url: "page/RightBody_Welcome" },
-
-//    { id: "right", text: "综合管理",},
-//    { id: "management", pid: "right", text: "管理", url: "page/RightBody_Welcome" },
-//
-//    { id: "science", text: "科研项目管理"},
-//    { id: "techonologyContractApply", pid: "science", text: "科研项目合同推荐申报", url: "researchContract/techonologyContractApply"},
-//    { id: "addRight", pid: "science", text: "科研项目申报与评审", url: "researchRA/projectApplyBasic" },
-//    { id: "engineerApproval", pid: "science", text: "工程师组织审核", url: "researchRA/engineerApproval" },
-//    { id: "teamLeaderApproval", pid: "science", text: "评审小组组长填写评审意见", url: "researchRA/teamLeaderApproval" },
-//    { id: "projectApplyBasic", pid: "science", text: "科研项目申报", url: "researchRA/projectApplyBasic" },
-//    { id: "departmentManagerApproval", pid: "science", text: "部门经理审批", url: "researchRA/departmentManagerApproval" },
-//    { id: "technologyManagerApproval", pid: "science", text: "科技办经理审批", url: "researchRA/technologyManagerApproval" },
-//    { id: "financialApproval", pid: "science", text: "财务部审批", url: "researchRA/financialApproval" },
-//    { id: "managerApproval", pid: "science", text: "总经理审批", url: "researchContract/managerApproval" },
 
 
 }
