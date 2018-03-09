@@ -10,6 +10,7 @@
 
   <properties>
     <shiro-version>1.2.2</shiro-version>
+    <activiti.version>6.0.0</activiti.version>
   </properties>
 
   <dependencies>
@@ -232,11 +233,6 @@
       <version>${shiro-version}</version>
     </dependency>
 
-    <!--<dependency>-->
-      <!--<groupId>org.slf4j</groupId>-->
-      <!--<artifactId>slf4j-log4j12</artifactId>-->
-      <!--<version>1.6.4</version>-->
-    <!--</dependency>-->
 
     <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
     <dependency>
@@ -251,6 +247,38 @@
       <artifactId>spring-data-redis</artifactId>
       <version>1.7.2.RELEASE</version>
     </dependency>
+
+    <!-- activiti-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-engine</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-bpmn-model</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-bpmn-converter</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-process-validation</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-bpmn-layout</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.activiti</groupId>-->
+      <!--<artifactId>activiti-spring</artifactId>-->
+      <!--<version>${activiti.version}</version>-->
+    <!--</dependency>-->
 
 
   </dependencies>
