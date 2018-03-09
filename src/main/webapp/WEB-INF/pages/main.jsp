@@ -40,7 +40,7 @@
 <body>
 <%--http://music.163.com/#/song?id=849739--%>
 <div id="topbk">
-    <span style="float: left; padding-left: 500px"><h3>当前用户: ${username}</h3></span>
+    <span style="float: left; padding-left: 650px"><h3>当前用户: ${username}</h3></span>
     <button style="float: right" onclick="email()">个人工作台</button>
     <button style="float: right" onclick="exit()">退出登录</button>
     <button style="float: right">个人工作台</button>
