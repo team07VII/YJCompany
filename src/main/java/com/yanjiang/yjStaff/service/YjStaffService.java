@@ -19,4 +19,6 @@ public interface YjStaffService {
 
     Set<String> getRoles(String userName);
 
+    YjStaff findToEmail(String email);
+
 }

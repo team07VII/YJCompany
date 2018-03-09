@@ -62,4 +62,9 @@ public class YjStaffServiceImpl implements YjStaffService {
         return yjStaffMapper.getRoles(userName);
     }
 
+    @Override
+    public YjStaff findToEmail(String email) {
+        return yjStaffMapper.findToEmail(email);
+    }
+
 }

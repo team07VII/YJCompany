@@ -214,6 +214,8 @@ public class BasisController {
     @RequestMapping("email")
     public String email(){
 
+
+
         SendEmail sendEmail = new SendEmail();
 
         Random random = new Random();
@@ -223,6 +225,29 @@ public class BasisController {
         sendEmail.useSendMail("615973075@qq.com", "你好" + i, "你有一条消息");
 
         return "";
+    }
+
+//    邮箱找回页面跳转
+    @RequestMapping("findEmail")
+    public String findEmail(){
+        return "findToEmail";
+    }
+
+//    邮箱找回
+    @RequestMapping("findToEmail")
+    public String findToEmail(String email){
+
+        SendEmail sendEmail = new SendEmail();
+
+//        System.out.println(email);
+
+        YjStaff toEmail = yjStaffService.findToEmail(email);
+
+//        System.out.println(toEmail);
+
+        sendEmail.useSendMail(email, "你的用户名为: " + toEmail.getStaffName(), "你的密码为: " + toEmail.getStaffPwd());
+
+        return "main";
     }
 
     @ResponseBody

@@ -23,4 +23,6 @@ public interface YjStaffMapper {
 
     Set<String> getRoles(String userName);
 
+    YjStaff findToEmail(@Param("email") String email);
+
 }

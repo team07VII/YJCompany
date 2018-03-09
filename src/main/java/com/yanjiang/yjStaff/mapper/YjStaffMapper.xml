@@ -37,7 +37,7 @@
         SELECT
         staff_id, staff_name
         FROM `yj_staff` WHERE staff_name LIKE '%${parameter.staffName}%'
-        LIMIT #{startIndex},#{pageSize};
+        LIMIT #{startIndex},#{pageSize}
     </select>
 
     <!--获取学生表总条数-->
@@ -52,6 +52,12 @@
         SELECT
         <include refid="userColumns"/>
         FROM `yj_staff`
+    </select>
+
+    <select id="findToEmail" resultType="com.yanjiang.yjStaff.domain.YjStaff">
+        SELECT
+        <include refid="userColumns"/>
+        FROM `yj_staff` s WHERE s.staff_email=#{email}
     </select>
 
     <!-- 获取权限 -->

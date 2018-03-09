@@ -128,6 +128,9 @@
 
     <br><br>
 
+        <a href="/findEmail"><img src="/resources/images/email.png" style="width: 40px; height: 25px; padding: 0px; margin: 0px"></a>
+
+
     <p id="notice1" class="hide">请先完成验证</p>
 
     <div id="message" style="width:160px; margin-left:88px; height:30px; color: red">${msg}</div>
