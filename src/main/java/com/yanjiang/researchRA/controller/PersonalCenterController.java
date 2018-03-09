@@ -12,6 +12,8 @@ import java.util.List;
 /**
  * Created by dllo on 18/3/5.
  */
+
+//个人中心里数据的查询
 @Controller
 @RequestMapping("researchRA/")
 public class PersonalCenterController {
@@ -19,6 +21,7 @@ public class PersonalCenterController {
     @Resource
     private PersonalCenterService personalCenterService;
 
+    //查询数据
     @RequestMapping("/selectAllPersonalCenter")
     @ResponseBody
     public List<PersonalCenter> selectAllPersonalCenter(){

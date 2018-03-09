@@ -5,6 +5,7 @@ import javax.xml.crypto.Data;
 /**
  * Created by dllo on 18/3/2.
  */
+//个人中心的实体类
 public class PersonalCenter {
     private int processId;
 //    项目名称
