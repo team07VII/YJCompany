@@ -87,8 +87,8 @@
                                     <td>
                                     <input style="width:100%;"class="mini-buttonedit"
                                     allowInput="false"
-                                    onbuttonclick="onStudentButtonEdit"
-                                    name="sid" textName="sname"/>
+                                    onbuttonclick="onApplicationUnit"
+                                    name="appOrgNo" textName="appOrgOame"/>
                                     </td>
 
 
@@ -266,6 +266,30 @@
 //            }
 //        })
 //    }
+
+    function onApplicationUnit(e) {
+        //加载mini组件 后面的get方法才好用
+        var btnEdit = this;
+        mini.open({
+            url: "/researchRA/applicationUnit",
+            title: "选择项目申报单位",
+            width: 650,
+            height: 380,
+            ondestroy: function (action) {
+                //if (action == "close") return false;
+                if (action == "ok") {
+                    var iframe = this.getIFrameEl();
+                    var data = iframe.contentWindow.GetData();
+                    data = mini.clone(data);    //必须
+                    if (data) {
+                        btnEdit.setValue(data.aid);
+                        btnEdit.setText(data.aname);
+                    }
+                }
+
+            }
+        })
+    }
 
     function onPeopleButtonEdit(e) {
         //加载mini组件 后面的get方法才好用
