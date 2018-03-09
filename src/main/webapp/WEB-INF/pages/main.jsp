@@ -40,7 +40,8 @@
 <body>
 <%--http://music.163.com/#/song?id=849739--%>
 <div id="topbk">
-    <span style="float: left; padding-left: 500px; padding-top: 5px"><h3>当前用户: ${username}</h3></span>
+    <span style="float: left; padding-left: 900px"><h3>当前用户: ${username}</h3></span>
+    <a href="">发送邮件</a>
     <button style="float: right" onclick="exit()">退出登录</button>
     <button style="float: right">个人工作台</button>
 </div>
@@ -48,8 +49,8 @@
     <%--<div  region="north"--%>
          <%--style="background-color: #e8ecf6;float: left;width: 100%;height: 15px">--%>
          <%--&lt;%&ndash;&ndash;%&gt;--%>
-        <%--&lt;%&ndash; 背景音乐 &ndash;%&gt;--%>
-        <%--&lt;%&ndash;<embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">&ndash;%&gt;--%>
+        <%-- 背景音乐 --%>
+        <embed width="1" height="1" src="/resources/music/underMusic.mp3" autostart=true controls="pausebutton">
 
                 <%--<span style="float: left"><h3>当前用户: ${username}</h3></span>--%>
                 <%--<button style="float: right" onclick="exit()">退出登录</button>--%>

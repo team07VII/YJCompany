@@ -3,6 +3,7 @@ package com.yanjiang.basis.controller;
 import com.yanjiang.basis.utils.BaseResult;
 import com.yanjiang.basis.utils.GEETEST.GeetestConfig;
 import com.yanjiang.basis.utils.GEETEST.GeetestLib;
+import com.yanjiang.basis.utils.mail.SendEmail;
 import com.yanjiang.yjStaff.domain.YjStaff;
 import com.yanjiang.yjStaff.service.YjStaffService;
 import org.apache.shiro.SecurityUtils;
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Created by dllo on 18/2/2.
@@ -152,6 +154,12 @@ public class BasisController {
         return "page/RightBody_Welcome";
     }
 
+//    个人公共平台
+    @RequestMapping("page/peopleTable")
+    public String peopleTable(){
+        return "page/peopleTable";
+    }
+
     //    登录页面
     @RequestMapping("login")
     public String login() {
@@ -200,6 +208,20 @@ public class BasisController {
         return "main";
     }
 
+    @RequestMapping("email")
+    public String email(){
+
+        SendEmail sendEmail = new SendEmail();
+
+        Random random = new Random();
+
+        int i = random.nextInt() * 100;
+
+        sendEmail.useSendMail("615973075@qq.com", "你好" + i, "你有一条消息");
+
+        return "";
+    }
+
     @ResponseBody
     @RequestMapping("someJson")
     public String someJson(){
@@ -213,14 +235,13 @@ public class BasisController {
                   "{ id: 'frontPage', pid: 'front', text: '公司简介', url: 'page/RightBody_Welcome' }," +
 
                   "{ id: 'user', text: '个人中心',}," +
-                  "{ id: 'addUser', pid: 'user', text: '个人工作平台', url: 'page/RightBody_Welcome' }," +
+                  "{ id: 'peopleTable', pid: 'user', text: '个人工作平台', url: 'page/peopleTable' }," +
 
                   "{ id: 'right', text: '综合管理',}," +
                   "{ id: 'management', pid: 'right', text: '管理', url: 'page/RightBody_Welcome' }," +
 
                   "{ id: 'science', text: '科研项目管理'}," +
                   "{ id: 'techonologyContractApply', pid: 'science', text: '科研项目合同推荐申报', url: 'researchContract/techonologyContractApply'}," +
-                  "{ id: 'projectApplyBasic', pid: 'science', text: '科研项目申报', url: 'researchRA/projectApplyBasic' }," +
                   "{ id: 'addRight', pid: 'science', text: '科研项目申报与评审', url: 'researchRA/projectApplyBasic' },"
         );
 
@@ -260,7 +281,7 @@ public class BasisController {
 
         sb.append("]");
 
-        System.out.println(sb.toString());
+//        System.out.println(sb.toString());
 
         return sb.toString();
     }
