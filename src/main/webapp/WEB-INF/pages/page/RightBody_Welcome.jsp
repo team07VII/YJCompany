@@ -114,14 +114,14 @@
                 <td>
                     <div id="listbox2" class="mini-listbox" style="width:100%;"
                          value="cn" onvaluechanged="onListBoxValueChanged"
-                         url="/resources/text/countrys.txt" showCheckBox="true" multiSelect="true" >
+                         url="/researchRA/selectAllPersonalCenter" showCheckBox="true" multiSelect="true" >
                         <div property="columns">
-                            <div header="流程编号" field="id"></div>
-                            <div header="流程名称" field="name"></div>
-                            <div header="所属部门" field="dep"></div>
-                            <div header="当前环节" field="step"></div>
-                            <div header="提报人" field="person"></div>
-                            <div header="提报时间" field="time"></div>
+                            <div header="流程编号" field="processId"></div>
+                            <div header="流程名称" field="processName"></div>
+                            <div header="所属部门" field="departmentName"></div>
+                            <div header="当前环节" field="currentLink"></div>
+                            <div header="提报人" field="applyName"></div>
+                            <div header="提报时间" field="applyTime"></div>
                             <div header="操作" field="ctrl"></div>
                         </div>
                     </div>

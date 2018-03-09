@@ -9,13 +9,13 @@
         <result property="departmentName" column="DEPARTMENT_NAME" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result property="currentLink" column="CURRENT_LINK" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result property="applyName" column="APPLY_NAME" jdbcType="VARCHAR" javaType="java.lang.String"/>
-        <result property="applyTime" column="APPLY_TIME" jdbcType="DATE" javaType="java.util.Date"/>
+        <result property="applyTime" column="APPLY_TIME" jdbcType="VARCHAR" javaType="java.lang.String"/>
     </resultMap>
     <sql id="PersonalCenterColumns">
-        processId,processName,departmentName,currentLink,applyName,applyTime
+        PROCESS_NO,PROCESS_NAME,DEPARTMENT_NAME,CURRENT_LINK,APPLY_NAME,APPLY_TIME
     </sql>
 
-    <select id="selectAllPersonalCenter" resultMap="PersonalCenterMap">
+    <select id="selectAllPersonalCenter" resultType="com.yanjiang.researchRA.domain.PersonalCenter">
         SELECT
         <include refid="PersonalCenterColumns"/>
         FROM yj_personal_center
