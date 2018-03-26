@@ -27,6 +27,7 @@ public class Mailtest {
     @Test
     public void sendSingleTest(){
         log.info("sendSingleTest");
+//                       发送的邮箱                  发送的标题                   发送的内容
         mailUtil.send("615973075@qq.com", "This is a test single mail", "Hello Single!");
     }
 
