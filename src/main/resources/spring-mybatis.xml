@@ -16,7 +16,7 @@
         <property name="password" value="${password}"/>
     </bean>
 
-    <!-- 2. 配置 SqlSessionFactory -->
+    <!-- 2. 配置 SqlSessionFactory工厂 -->
     <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <property name="dataSource" ref="dataSource"/>
